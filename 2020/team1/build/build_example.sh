@@ -14,6 +14,13 @@ ninja -C build install
 rm -rf build
 
 cd $NNST_ROOT/bin
-./get-model.sh image-classification-tflite image-classification-caffe2 object-detection-tf object-detection-tflite speech-command image-segmentation-tflite text-classification-tflite pose-estimation-tflite
+./get-model.sh image-classification-tflite 
+./get-model.sh image-classification-caffe2
+./get-model.sh object-detection-tf
+./get-model.sh object-detection-tflite
+./get-model.sh speech-command
+./get-model.sh image-segmentation-tflite
+./get-model.sh text-classification-tflite
+./get-model.sh pose-estimation-tflite
 
 echo "Your NNStreamer develop environment is ready!"
