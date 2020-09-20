@@ -20,7 +20,7 @@ sudo apt-get -y install ninja-build python-pip python3-pip libglib2.0-* python-g
 	libgirepository1.0-dev gir1.2-gstreamer-1.0 python-gst-1.0* \
 	libgstreamer-plugins-* libgstreamer-plugins-base1.0-dev libgstreamer1.0* gstreamer1.0-plugins-* \
 	libcairo-5c0 libcairo-gobject* libcairo2* nnstreamer-* tensorflow-* libprotobuf* protobuf-compiler17 \
-	libflatbuffers libflatbuffers-dev flatbuffers-compiler libjpeg-dev libgif-dev 
+	libflatbuffers libflatbuffers-dev flatbuffers-compiler libjpeg-dev libgif-dev
 
 echo "Install Meson"
 pip3 install --user meson
