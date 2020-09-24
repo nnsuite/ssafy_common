@@ -2,7 +2,7 @@
 
 """
 @file		nnstreamer_example_face_detection_tflite.py
-@date		13 Oct 2020
+@date		4 Oct 2020
 @brief		Tensor stream example with filter
 @see		https://github.com/nnsuite/nnstreamer
 @author		SSAFY Team 1 <jangjongha.sw@gmail.com>
@@ -121,3 +121,4 @@ class NNStreamerExample:
 if __name__ == '__main__':
     example = NNStreamerExample(sys.argv[1:])
     example.run_example()
+    
