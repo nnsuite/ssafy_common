@@ -32,9 +32,12 @@ import os
 import sys
 import gi
 import logging
+import math
 
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst, GObject
+
+DEBUG = False
 
 class NNStreamerExample:
     """NNStreamer example for Object Detection."""
@@ -43,12 +46,26 @@ class NNStreamerExample:
         self.loop = None
         self.pipeline = None
         self.running = False
-        self.tflite_model = ''
-        self.tflite_labels = []
-        self.tflite_box_priors = []
+
         self.BOX_SIZE = 4
         self.LABEL_SIZE = 91
         self.DETECTION_MAX = 1917
+
+        self.Y_SCALE = 10.0
+        self.X_SCALE = 10.0
+        self.H_SCALE = 5.0
+        self.W_SCALE = 5.0
+
+        self.VIDEO_WIDTH = 640
+        self.VIDEO_HEIGHT = 480
+        self.MODEL_WIDTH = 300
+        self.MODEL_HEIGHT = 300
+
+        self.tflite_model = ''
+        self.tflite_labels = []
+        self.tflite_box_priors = []
+        self.overlay_state = []
+        self.detected_objects = []
 
         if not self.tflite_init():
             raise Exception
@@ -85,30 +102,25 @@ class NNStreamerExample:
         # tensor sink signal : new data callback
         tensor_sink = self.pipeline.get_by_name('tensor_sink')
         tensor_sink.connect('new-data', self.new_data_cb)
+        
+        # tensor_res = self.pipeline.get_by_name('tensor_res')
+        # tensor_res.connect('draw', self.draw_overlay_cb)
+        # tensor_res.connect('caps-changed', self.prepare_overlay_cb)
 
+        # start pipeline
+        self.pipeline.set_state(Gst.State.PLAYING)
+        self.running = True
 
+        self.set_window_title('img_tensor', 'NNStreamer Object Detection Example')
 
-        #define Y_SCALE         10.0f
-        #define X_SCALE         10.0f
-        #define H_SCALE         5.0f
-        #define W_SCALE         5.0f
-        #define DETECTION_MAX   1917
+        # run main loop
+        self.loop.run()
 
+        # quit when received eos or error message
+        self.running = False
+        self.pipeline.set_state(Gst.State.NULL)
 
-        # # start pipeline
-        # self.pipeline.set_state(Gst.State.PLAYING)
-        # self.running = True
-
-        # self.set_window_title('img_tensor', 'NNStreamer Face Detection Example')
-
-        # # run main loop
-        # self.loop.run()
-
-        # # quit when received eos or error message
-        # self.running = False
-        # self.pipeline.set_state(Gst.State.NULL)
-
-        # bus.remove_signal_watch()
+        bus.remove_signal_watch()
 
     def tflite_init(self):
         """
@@ -175,17 +187,94 @@ class NNStreamerExample:
             format_str = Gst.Format.get_name(data_format)
             logging.debug('[qos] format[%s] processed[%d] dropped[%d]', format_str, processed, dropped)
 
+    def iou(self, A, B):
+        x1 = max(A['x'], B['x'])
+        y1 = max(A['y'], B['y'])
+        x2 = min(A['x'] + A['width'], B['x'] + B['width'])
+        y2 = min(A['y'] + A['height'], B['y'] + B['height'])
+        w = max(0, (x2 - x1 + 1))
+        h = max(0, (y2 - y1 + 1))
+        inter = float(w * h)
+        areaA = float(A['width'] * A['height'])
+        areaB = float(B['width'] * B['height'])
+        o = float(inter / (areaA + areaB - inter))
+        return o if o >= 0 else 0
+
+    def nms(self, detected):
+        threshold_iou = 0.5
+        detected = sorted(detected, key=lambda a: a['prob'])
+        boxes_size = len(detected)
+
+        _del = [False for _ in range(boxes_size)]
+
+        for i in range(boxes_size):
+            if not _del[i]:
+                for j in range(i + 1, boxes_size):
+                    if self.iou(detected[i], detected[j]) > threshold_iou:
+                        _del[j] = True
+
+        # update result
+        self.detected_objects.clear()
+
+        for i in range(boxes_size):
+            if not _del[i]:
+                self.detected_objects.append(detected[i])
+
+                if DEBUG:
+                    print("==============================")
+                    print("LABEL           : {}".format(self.tflite_labels[detected[i]["class_id"]]))
+                    print("x               : {}".format(detected[i]["x"]))
+                    print("y               : {}".format(detected[i]["y"]))
+                    print("width           : {}".format(detected[i]["width"]))
+                    print("height          : {}".format(detected[i]["height"]))
+                    print("Confidence Score: {}".format(detected[i]["prob"]))
+
+
     def get_detected_objects(self, detections, boxes):
-        print(detections, boxes)
-        pass
+        threshold_score = 0.5
+        detected = list()
+
+        for d in range(self.DETECTION_MAX):
+            ycenter = boxes[0] / self.Y_SCALE * self.tflite_box_priors[2][d] + self.tflite_box_priors[0][d]
+            xcenter = boxes[1] / self.X_SCALE * self.tflite_box_priors[3][d] + self.tflite_box_priors[1][d]
+            h = math.exp(boxes[2] / self.H_SCALE) * self.tflite_box_priors[2][d]
+            w = math.exp(boxes[3] / self.W_SCALE) * self.tflite_box_priors[3][d]
+
+            ymin = ycenter - h / 2.0
+            xmin = xcenter - w / 2.0
+            ymax = ycenter + h / 2.0
+            xmax = xcenter + w / 2.0
+
+            x = xmin * self.MODEL_WIDTH
+            y = ymin * self.MODEL_HEIGHT
+            width = (xmax - xmin) * self.MODEL_WIDTH
+            height = (ymax - ymin) * self.MODEL_HEIGHT
+
+            for c in range(1, self.LABEL_SIZE):
+                score = 1.0 / (1.0 + math.exp(-detections[c]))
+
+                if score < threshold_score:
+                    continue
+
+                obj = {
+                    'class_id': c,
+                    'x': x,
+                    'y': y,
+                    'width': width,
+                    'height': height,
+                    'prob': score
+                }
+
+                detected.append(obj)
+            
+            # detections += self.LABEL_SIZE
+            # boxes += self.BOX_SIZE
+        
+        self.nms(detected)
 
     def new_data_cb(self, sink, buffer):
-        """
-        WIP
-        """
-
         if self.running:
-            if len(buffer.n_memory()) != 2:
+            if buffer.n_memory() != 2:
                 return False
             
             # boxes
@@ -220,8 +309,16 @@ class NNStreamerExample:
                 tags = Gst.TagList.new_empty()
                 tags.add_value(Gst.TagMergeMode.APPEND, 'title', title)
                 pad.send_event(Gst.Event.new_tag(tags))
+    
+    # # @brief Store the information from the caps that we are interested in.
+    # def prepare_overlay_cb(self, overlay, caps, user_data):
+    #     pass
+
+    # # @brief Callback to draw the overlay.
+    # def draw_overlay_cb(self, overlay, cr, timestamp, duration, user_data):
+    #     state = self.overlay_state
 
 if __name__ == '__main__':
     example = NNStreamerExample(sys.argv[1:])
-    # example.run_example()
-
+    example.run_example()
+    
