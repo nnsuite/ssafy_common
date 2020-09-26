@@ -55,7 +55,7 @@ cv2.imshow("captain-america", image);cv2.waitKey(0)
 
 OpenCV에서 여러 방법으로 이미지에 `kernel(filter)`를 적용할 수 있다. 여기서 `kernel`은 행렬을 의미하는데, 이미지의 각 pixel에 `kernel`이 적용되는 식이다.
 
-![20200924_143556](C:\Users\multicampus\Desktop\SR_PJ\20200924_143556.png)
+![20200924_143556](C:\Users\multicampus\Desktop\ssafy_common\2020\team1\pixelation\image\20200924_143556.png)
 
 - kernel 예시
 
@@ -131,7 +131,7 @@ pixelated_img = anonymize_face_pixelate(blured_img)
 
 - 결과
 
-  ![20200924_143950](C:\Users\multicampus\Desktop\SR_PJ\20200924_143950.png)
+  ![20200924_143950](C:\Users\multicampus\Desktop\ssafy_common\2020\team1\pixelation\image\20200924_143950.png)
 
 ## 4. 실시간 얼굴 모자이크 처리
 
@@ -210,7 +210,7 @@ cv2.destroyAllWindows()
 
 - 결과
 
-  ![20200926_130241](C:\Users\multicampus\Desktop\SR_PJ\20200926_130241.png)
+  ![20200926_130241](C:\Users\multicampus\Desktop\ssafy_common\2020\team1\pixelation\image\20200926_130241.png)
 
 ### 참고. argparse 모듈
 
