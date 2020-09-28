@@ -1,7 +1,0 @@
-#Mon Sep 28 09:09:14 PDT 2020
-base.0=/home/davichiar/Documents/ssafy_common/2020/team3/team3_example/use_api/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/home/davichiar/Documents/ssafy_common/2020/team3/team3_example/use_api/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
