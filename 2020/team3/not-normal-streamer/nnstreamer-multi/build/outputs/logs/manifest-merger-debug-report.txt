@@ -1,0 +1,123 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/9d61ee166fb6d02f8e98ae5131d7fa91/animated-vector-drawable-24.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3370ad42e1130e8f3c3dfa7badc9bda8/support-vector-drawable-24.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-v4:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fb82cbcf470e1b2a5d1af9710562e50c/support-v4-24.0.0/AndroidManifest.xml:17:1-27:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:4:5-51
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:6:5-30
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:5:5-28
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+uses-feature#0x00020000
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:8:5-53
+	android:glEsVersion
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:8:19-51
+uses-feature#android.hardware.camera
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:5-85
+	android:required
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:58-82
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:19-57
+uses-permission#android.permission.CAMERA
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:10:5-65
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:10:22-62
+uses-permission#android.permission.INTERNET
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:12:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:14:22-65
+application
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:16:5-32:19
+MERGED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/9d61ee166fb6d02f8e98ae5131d7fa91/animated-vector-drawable-24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/9d61ee166fb6d02f8e98ae5131d7fa91/animated-vector-drawable-24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3370ad42e1130e8f3c3dfa7badc9bda8/support-vector-drawable-24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3370ad42e1130e8f3c3dfa7badc9bda8/support-vector-drawable-24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fb82cbcf470e1b2a5d1af9710562e50c/support-v4-24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fb82cbcf470e1b2a5d1af9710562e50c/support-v4-24.0.0/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:18:9-41
+	android:hardwareAccelerated
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:17:9-43
+	tools:ignore
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:22:9-48
+	android:icon
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:19:9-46
+	android:theme
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:21:9-71
+	android:networkSecurityConfig
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:20:9-69
+activity#org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:23:9-31:20
+	android:screenOrientation
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:25:13-49
+	android:label
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:26:13-45
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:24:13-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:29:27-74
+uses-sdk
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/9d61ee166fb6d02f8e98ae5131d7fa91/animated-vector-drawable-24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/9d61ee166fb6d02f8e98ae5131d7fa91/animated-vector-drawable-24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3370ad42e1130e8f3c3dfa7badc9bda8/support-vector-drawable-24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3370ad42e1130e8f3c3dfa7badc9bda8/support-vector-drawable-24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fb82cbcf470e1b2a5d1af9710562e50c/support-v4-24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fb82cbcf470e1b2a5d1af9710562e50c/support-v4-24.0.0/AndroidManifest.xml:21:5-23:54
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/eaf94d5d7798d984a613d82f4049f5e6/appcompat-v7-24.0.0/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		ADDED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml

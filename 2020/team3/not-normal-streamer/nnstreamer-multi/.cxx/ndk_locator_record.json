@@ -1,0 +1,41 @@
+{
+  "ndkFolder": "/home/davichiar/android/tools/ndk",
+  "messages": [
+    {
+      "level": "INFO",
+      "message": "android.ndkVersion from module build.gradle is not set"
+    },
+    {
+      "level": "INFO",
+      "message": "ndk.dir in local.properties is /home/davichiar/android/tools/ndk"
+    },
+    {
+      "level": "INFO",
+      "message": "ANDROID_NDK_HOME environment variable is not set"
+    },
+    {
+      "level": "INFO",
+      "message": "sdkFolder is /home/davichiar/android/tools/sdk"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/davichiar/android/tools/ndk by ndk.dir"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/davichiar/android/tools/sdk/ndk-bundle in SDK ndk-bundle folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/davichiar/android/tools/sdk/ndk/21.3.6528147 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/davichiar/android/tools/sdk/ndk/21.0.6113669 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Found requested ndk.dir (/home/davichiar/android/tools/ndk) which has version 18.1.5063045"
+    }
+  ]
+}

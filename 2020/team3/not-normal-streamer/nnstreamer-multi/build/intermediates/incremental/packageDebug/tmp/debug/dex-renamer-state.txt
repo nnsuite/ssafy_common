@@ -1,0 +1,7 @@
+#Mon Sep 28 12:15:07 PDT 2020
+base.0=/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex

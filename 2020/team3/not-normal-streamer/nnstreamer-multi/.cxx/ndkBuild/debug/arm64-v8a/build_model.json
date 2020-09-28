@@ -1,0 +1,66 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer",
+      "sdkFolder": "/home/davichiar/android/tools/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi",
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates",
+      "gradleModulePathName": ":nnstreamer-multi",
+      "moduleRootFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi",
+      "makeFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/Android.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/.cxx",
+      "cxxFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx",
+      "ndkFolder": "/home/davichiar/android/tools/ndk",
+      "ndkVersion": "18.1.5063045",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [
+      "NDK_APPLICATION_MK\u003djni/Application.mk",
+      "GSTREAMER_JAVA_SRC_DIR\u003dsrc",
+      "GSTREAMER_ROOT_ANDROID\u003d/home/davichiar/android/gstreamer-1.0",
+      "GSTREAMER_ASSETS_DIR\u003dsrc/assets"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "debug",
+    "soFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/lib",
+    "objFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local",
+    "jsonFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug",
+    "gradleBuildOutputFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/cxx/debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARM64_V8A",
+      "ARMEABI_V7A"
+    ],
+    "buildTargetSet": [
+      "nnstreamer-jni"
+    ]
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 24,
+  "cxxBuildFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a",
+  "jsonFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/cxx/debug/arm64-v8a",
+  "objFolder": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a",
+  "buildCommandFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/build_command.txt",
+  "buildOutputFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/build_output.txt",
+  "modelOutputFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/build_model.json",
+  "jsonGenerationLoggingRecordFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/json_generation_record.json",
+  "compileCommandsJsonFile": "/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/.cxx/ndkBuild/debug/arm64-v8a/compile_commands.json"
+}

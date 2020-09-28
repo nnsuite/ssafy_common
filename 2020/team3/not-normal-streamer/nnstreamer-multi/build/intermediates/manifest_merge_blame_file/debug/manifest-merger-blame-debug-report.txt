@@ -1,0 +1,74 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.freedesktop.gstreamer.nnstreamer.multi"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml
+10
+11    <uses-feature android:glEsVersion="0x00020000" />
+11-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:8:5-53
+11-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:8:19-51
+12    <uses-feature
+12-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:5-85
+13        android:name="android.hardware.camera"
+13-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:19-57
+14        android:required="false" />
+14-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:9:58-82
+15
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:10:5-65
+16-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:10:22-62
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:11:5-67
+17-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:11:22-64
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:12:5-80
+18-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:12:22-77
+19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+19-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:13:5-81
+19-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:13:22-78
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:14:5-68
+20-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:14:22-65
+21
+22    <application
+22-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:16:5-32:19
+23        android:debuggable="true"
+24        android:hardwareAccelerated="true"
+24-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:17:9-43
+25        android:icon="@drawable/nnsuite_logo"
+25-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:19:9-46
+26        android:label="@string/app_name"
+26-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:18:9-41
+27        android:networkSecurityConfig="@xml/network_security_config"
+27-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:20:9-69
+28        android:testOnly="true"
+29        android:theme="@android:style/Theme.DeviceDefault.NoActionBar" >
+29-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:21:9-71
+30        <activity
+30-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:23:9-31:20
+31            android:name="org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity"
+31-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:24:13-47
+32            android:label="@string/app_name"
+32-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:26:13-45
+33            android:screenOrientation="portrait" >
+33-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:25:13-49
+34            <intent-filter>
+34-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:27:13-30:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:28:17-69
+35-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:28:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:29:17-77
+37-->/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/AndroidManifest.xml:29:27-74
+38            </intent-filter>
+39        </activity>
+40    </application>
+41
+42</manifest>
