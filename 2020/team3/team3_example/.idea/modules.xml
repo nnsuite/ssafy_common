@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/team3_example.iml" filepath="$PROJECT_DIR$/.idea/modules/team3_example.iml" group="team3_example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/use_api/use_api.iml" filepath="$PROJECT_DIR$/.idea/modules/use_api/use_api.iml" group="team3_example/use_api" />
+    </modules>
+  </component>
+</project>
