@@ -688,6 +688,23 @@ gst_native_get_description (JNIEnv * env, jobject thiz, jint id, jint option)
 }
 
 /**
+ * @brief Get pipeline description
+ */
+static jstring
+gst_native_get_test (JNIEnv * env, jobject thiz, jint id, jint option)
+{
+  CustomData *data = GET_CUSTOM_DATA (env, thiz, custom_data_field_id);
+
+  if (!data)
+    return "";
+
+  char buf[64]; // assumed large enough to cope with result
+  sprintf(buf, "%d", data->pipeline_option);  // error checking omitted
+
+  return (*env)->NewStringUTF(env, buf);
+}
+
+/**
  * @brief List of implemented native methods
  */
 static JNINativeMethod native_methods[] = {
@@ -703,7 +720,8 @@ static JNINativeMethod native_methods[] = {
   {"nativeGetName", "(II)Ljava/lang/String;", (void *) gst_native_get_name},
   {"nativeGetDescription", "(II)Ljava/lang/String;",
       (void *) gst_native_get_description},
-  {"nativeClassInit", "()Z", (void *) gst_native_class_init}
+  {"nativeClassInit", "()Z", (void *) gst_native_class_init},
+  {"nativeGetTest", "(II)Ljava/lang/String;", (void *) gst_native_get_test},
 };
 
 /**

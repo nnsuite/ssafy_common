@@ -1,4 +1,4 @@
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/hw_accel.o: \
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/hw_accel.o: \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/hw_accel.c \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/hw_accel.h \
   /home/davichiar/android/gstreamer-1.0/armv7/include/glib-2.0/glib.h \

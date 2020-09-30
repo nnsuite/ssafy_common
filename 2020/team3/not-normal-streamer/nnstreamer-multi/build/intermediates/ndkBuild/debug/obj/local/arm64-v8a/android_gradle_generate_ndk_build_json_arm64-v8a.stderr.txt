@@ -1,0 +1,1 @@
+/home/davichiar/android/tools/ndk/build/core/build-shared-library.mk:23: *** Android NDK: Please correct error. Aborting    .  Stop.

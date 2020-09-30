@@ -1,8 +1,32 @@
 Processed sed 1
 Processed sed 2
 Processed sed 3
+[armeabi-v7a] Compile++ thumb: nnstreamer-jni <= nnstreamer-ex.cpp
 GStreamer      : [GEN] => gst-build-armeabi-v7a/gstreamer_android.c
 GStreamer      : [COMPILE] => gst-build-armeabi-v7a/gstreamer_android.c
 GStreamer      : [LINK] => gst-build-armeabi-v7a/libgstreamer_android.so
 Done mkdir
 Done cp
+[armeabi-v7a] Prebuilt       : libgstreamer_android.so <= gst-build-armeabi-v7a/
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_common.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_filter_common.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_filter_custom_easy.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_common_pipeline.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= nnstreamer.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_converter.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_aggregator.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensordec.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= gsttensordemux.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_filter.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= gsttensormerge.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= gsttensormux.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_repo.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_reposink.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_reposrc.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_sink.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= gsttensorsplit.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= tensor_transform.c
+[armeabi-v7a] Compile thumb  : nnstreamer <= gsttensorif.c
+[armeabi-v7a] Compile++ thumb: nnstreamer <= tensor_filter_tensorflow_lite.cc
+[armeabi-v7a] StaticLibrary  : libnnstreamer.a
+[armeabi-v7a] SharedLibrary  : libnnstreamer-jni.so

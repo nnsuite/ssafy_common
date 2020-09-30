@@ -1,4 +1,4 @@
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/ext/nnstreamer/tensor_filter/tensor_filter_tensorflow_lite.o: \
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/ext/nnstreamer/tensor_filter/tensor_filter_tensorflow_lite.o: \
   /home/davichiar/android/workspace/nnstreamer/ext/nnstreamer/tensor_filter/tensor_filter_tensorflow_lite.cc \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/algorithm \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/initializer_list \
@@ -205,15 +205,15 @@
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/include/nnstreamer_version.h \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/include/nnstreamer_plugin_api_filter.h \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/nnstreamer_conf.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/model.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/error_reporter.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/model.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/error_reporter.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/cstdarg \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/op_resolver.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/c/c_api_internal.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/op_resolver.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/c/c_api_internal.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/stdbool.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/schema/schema_generated.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/flatbuffers.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/base.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/schema/schema_generated.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/flatbuffers.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/base.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string_view \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__string \
@@ -230,8 +230,8 @@
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__split_buffer \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/set \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__tree \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/stl_emulation.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/interpreter.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/stl_emulation.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/interpreter.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/complex \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/cmath \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/math.h \
@@ -255,21 +255,21 @@
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__bsd_locale_fallbacks.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/bitset \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/istream \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/allocation.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/simple_memory_arena.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/allocation.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/simple_memory_arena.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/list \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/string.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/subgraph.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/memory_planner.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profiler.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profile_buffer.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/time.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/util.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/stderr_reporter.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/mutable_op_resolver.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/string.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/subgraph.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/memory_planner.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profiler.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profile_buffer.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/time.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/util.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/stderr_reporter.h \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/mutable_op_resolver.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/unordered_map \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__hash_table \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/kernels/register.h
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/kernels/register.h
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/algorithm:
 
@@ -681,23 +681,23 @@
 
 /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/nnstreamer_conf.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/model.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/model.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/error_reporter.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/error_reporter.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/cstdarg:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/op_resolver.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/api/op_resolver.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/c/c_api_internal.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/c/c_api_internal.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/stdbool.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/schema/schema_generated.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/schema/schema_generated.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/flatbuffers.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/flatbuffers.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/base.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/base.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string:
 
@@ -731,9 +731,9 @@
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__tree:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/stl_emulation.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/flatbuffers/stl_emulation.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/interpreter.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/interpreter.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/complex:
 
@@ -781,32 +781,32 @@
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/istream:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/allocation.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/allocation.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/simple_memory_arena.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/simple_memory_arena.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/list:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/string.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/string.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/subgraph.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/core/subgraph.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/memory_planner.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/memory_planner.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profiler.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profiler.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profile_buffer.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/profile_buffer.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/time.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/profiling/time.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/util.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/util.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/stderr_reporter.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/stderr_reporter.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/mutable_op_resolver.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/lite/mutable_op_resolver.h:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/unordered_map:
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__hash_table:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/kernels/register.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/../../common/jni/tensorflow-lite/include/tensorflow/contrib/lite/kernels/register.h:

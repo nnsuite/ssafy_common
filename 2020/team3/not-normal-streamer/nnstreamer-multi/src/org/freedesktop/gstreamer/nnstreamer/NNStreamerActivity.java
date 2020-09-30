@@ -48,6 +48,7 @@ public class NNStreamerActivity extends Activity implements
     private native void nativeSurfaceFinalize();
     private native String nativeGetName(int id, int option);
     private native String nativeGetDescription(int id, int option);
+    private native String nativeGetTest(int id, int option);
     private long native_custom_data;      /* Native code will use this to keep private data */
 
     private int pipelineId = 0;
@@ -90,6 +91,7 @@ public class NNStreamerActivity extends Activity implements
         }
 
         initActivity();
+        startTimerTask();
     }
 
     @Override
@@ -127,31 +129,11 @@ public class NNStreamerActivity extends Activity implements
 
     private void startTimerTask(){
 	timerTask=new TimerTask(){
-		int [] id ={256, 258, 262, 270, 286, 270, 262, 258};
-		int [] id_out ={0, 2, 6, 14, 30, 14, 6, 2};
-		int option=0;
-		int count = 0;
-
-		public void run(){
-		    int index;
-		    if(count == 8) {
-			    count = 0;
-			    option = 0;
-		    }
-
-		    if (useFrontCamera) {
-			    option = id[count];
-		    }else{
-			    option=id_out[count];
-		    }
-		    count++;
-
-		    nativePause();
-
-		    nativeStart(PIPELINE_ID,option);
-		}
+            public void run(){
+                viewDesc.setText(nativeGetTest(1, (1 << 3)));
+            }
 	    };
-	timer.schedule(timerTask, 0, 8000);
+	timer.schedule(timerTask, 0, 1000);
     }
 
     private void stopTimerTask(){
@@ -183,8 +165,6 @@ public class NNStreamerActivity extends Activity implements
         runOnUiThread(new Runnable() {
             public void run() {
                 /* Update pipeline title and description here */
-                viewDesc.setText(Html.fromHtml(desc, Html.FROM_HTML_MODE_LEGACY));
-
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -277,14 +257,14 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Create toast with given message.
+     * 주어진 메시지로 토스트를 만드세요.
      */
     private void showToast(final String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     /**
-     * Initialize GStreamer and the layout.
+     * GStreamer와 레이아웃을 초기화하십시오.
      */
     private void initActivity() {
         if (initialized) {
@@ -356,7 +336,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Enable (or disable) buttons to launch model.
+     * 모델을 시작하려면 버튼을 활성화(또는 비활성화)하십시오.
      */
     public void enableButton(boolean enabled) {
         buttonCam.setEnabled(enabled);
@@ -367,7 +347,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Start pipeline and update UI.
+     * 파이프라인 시작 및 UI 업데이트.
      */
     private void startPipeline(int newId) {
         pipelineId = newId;
@@ -384,7 +364,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Cancel pipeline timer.
+     * 파이프라인 타이머를 취소하십시오.
      */
     private void stopPipelineTimer() {
         if (pipelineTimer != null) {
@@ -394,7 +374,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Set timer to start new pipeline.
+     * 새 파이프라인을 시작하도록 타이머를 설정하십시오.
      */
     private void setPipelineTimer() {
         final long time = 200;
@@ -425,7 +405,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Check a model file exists in specific directory.
+     * 모델 파일이 특정 디렉터리에 있는지 확인하십시오.
      */
     private boolean checkModelFile(String fileName) {
         File modelFile;
@@ -441,7 +421,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Start to download model files.
+     * 모델 파일 다운로드를 시작하십시오.
      */
     private void downloadModels() {
         downloadTask = new DownloadModel(this, downloadPath);
@@ -449,7 +429,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Check all necessary files exists in specific directory.
+     * 특정 디렉터리에 필요한 모든 파일이 있는지 확인하십시오.
      */
     private boolean checkModels() {
         downloadList.clear();
@@ -467,7 +447,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * Show dialog to download model files.
+     * 모델 파일을 다운로드하는 대화 상자 표시
      */
     private void showDownloadDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

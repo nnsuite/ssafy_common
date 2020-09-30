@@ -1,5 +1,5 @@
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer-jni/nnstreamer-jni.o: \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/nnstreamer-jni.c \
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer-jni/nnstreamer-jni.o: \
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/nnstreamer-jni.c \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__config \
   /home/davichiar/android/gstreamer-1.0/armv7/include/gstreamer-1.0/gst/gst.h \
@@ -215,7 +215,7 @@
   /home/davichiar/android/gstreamer-1.0/armv7/include/gstreamer-1.0/gst/video/videooverlay.h \
   /home/davichiar/android/gstreamer-1.0/armv7/include/gstreamer-1.0/gst/video/gstvideoaffinetransformationmeta.h \
   /home/davichiar/android/gstreamer-1.0/armv7/include/gstreamer-1.0/gst/video/video-anc.h \
-  /home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/nnstreamer-jni.h
+  /home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/nnstreamer-jni.h
 
 /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string.h:
 
@@ -647,4 +647,4 @@
 
 /home/davichiar/android/gstreamer-1.0/armv7/include/gstreamer-1.0/gst/video/video-anc.h:
 
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/jni/nnstreamer-jni.h:
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/jni/nnstreamer-jni.h:

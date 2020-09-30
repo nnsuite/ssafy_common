@@ -1,4 +1,4 @@
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_if/gsttensorif.o: \
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_if/gsttensorif.o: \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_if/gsttensorif.c \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/nnstreamer_log.h \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_if/gsttensorif.h \

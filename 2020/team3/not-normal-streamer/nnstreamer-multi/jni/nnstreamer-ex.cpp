@@ -33,6 +33,7 @@
 #define EX_HAND_LABEL EX_MODEL_PATH "/labels_hand.txt"
 
 #define EX_POSE_MODEL EX_MODEL_PATH "/detect_pose.tflite"
+#define EX_POSE_LABEL EX_MODEL_PATH
 
 #define MODEL_FACE (1 << 1)
 #define MODEL_HAND (1 << 2)
@@ -494,6 +495,10 @@ ssd_draw_object (cairo_t * cr, ssd_object_s * objects,
     y = (gdouble) objects[i].y * MEDIA_HEIGHT / SSD_MODEL_HEIGHT;
     width = (gdouble) objects[i].width * MEDIA_WIDTH / SSD_MODEL_WIDTH;
     height = (gdouble) objects[i].height * MEDIA_HEIGHT / SSD_MODEL_HEIGHT;
+
+    if (IS_HAND (model)) {
+      nns_logd ("capture now : %d %d %d %d", (gint) x, (gint) y, (gint) width, (gint) height);
+    }
 
     /* draw rectangle */
     cairo_rectangle (cr, x, y, width, height);

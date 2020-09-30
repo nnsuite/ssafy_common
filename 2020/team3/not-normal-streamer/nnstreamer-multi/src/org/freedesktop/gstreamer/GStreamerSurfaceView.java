@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Toast;
 
 /* A simple SurfaceView whose width and height can be set from the outside */
 public class GStreamerSurfaceView extends SurfaceView {

@@ -1,4 +1,4 @@
-/home/davichiar/android/workspace/nnstreamer-example/android/example_app/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_filter/tensor_filter.o: \
+/home/davichiar/Documents/ssafy_common/2020/team3/not-normal-streamer/nnstreamer-multi/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/objs-debug/nnstreamer//home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_filter/tensor_filter.o: \
   /home/davichiar/android/workspace/nnstreamer/gst/nnstreamer/tensor_filter/tensor_filter.c \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/string.h \
   /home/davichiar/android/tools/ndk/sources/cxx-stl/llvm-libc++/include/__config \
