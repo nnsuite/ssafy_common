@@ -135,7 +135,7 @@ public class NNStreamerActivity extends Activity implements
                 viewDesc.setText(nativeGetTest(1, (1 << 2)));
             }
 	    };
-	timer.schedule(timerTask, 0, 1000);
+	timer.schedule(timerTask, 0, 100);
     }
 
     private void stopTimerTask(){

@@ -1,7 +1,6 @@
 Processed sed 1
 Processed sed 2
 Processed sed 3
-[armeabi-v7a] Compile thumb  : nnstreamer-jni <= nnstreamer-jni.c
 GStreamer      : [GEN] => gst-build-armeabi-v7a/gstreamer_android.c
 GStreamer      : [COMPILE] => gst-build-armeabi-v7a/gstreamer_android.c
 GStreamer      : [LINK] => gst-build-armeabi-v7a/libgstreamer_android.so
