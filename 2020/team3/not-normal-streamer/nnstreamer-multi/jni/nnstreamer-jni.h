@@ -46,9 +46,15 @@ extern "C"
 #endif
 
 gboolean nns_register_pipeline(NNSPipelineInfo *info);
+gboolean do_something(gint tempx, gint tempy, gint tempwidth, gint tempheight);
 
 #ifdef __cplusplus
 }
 #endif
+
+extern gint rectx;
+extern gint recty;
+extern gint width;
+extern gint height;
 
 #endif /* __NNSTREAMER_JNI_H__ */

@@ -118,6 +118,25 @@ static std::vector<ssd_object_s> detected_hand;
 static std::vector<ssd_object_s> detected_object;
 static std::vector<pose_s> estimated_pose;
 
+static gboolean nns_ex_init (void);
+static void nns_ex_free (void);
+static gboolean nns_ex_get_name (gchar ** name, const gint option);
+static gboolean nns_ex_get_description (gchar ** desc, const gint option);
+static gboolean nns_ex_prepare_pipeline (const gint option);
+static gboolean nns_ex_launch_pipeline (GstElement ** pipeline, const gint option);
+
+static NNSPipelineInfo nns_ex_pipeline = {
+  .id = 1,
+  .name = "NNStreamer with multi models",
+  .description = "Example with Tensorflow-lite models.",
+  .init = nns_ex_init,
+  .free = nns_ex_free,
+  .get_name = nns_ex_get_name,
+  .get_description = nns_ex_get_description,
+  .prepare_pipeline = nns_ex_prepare_pipeline,
+  .launch_pipeline = nns_ex_launch_pipeline,
+};
+
 /**
  * @brief Read strings from file.
  */
@@ -478,6 +497,8 @@ ssd_draw_object (cairo_t * cr, ssd_object_s * objects,
   gdouble red, green, blue;
   gchar *label;
 
+  do_something((gint) x, (gint) y, (gint) width, (gint) height);
+  
   /* Set clolr */
   if (IS_FACE (model)) {
     blue = 1.0;
@@ -496,8 +517,8 @@ ssd_draw_object (cairo_t * cr, ssd_object_s * objects,
     width = (gdouble) objects[i].width * MEDIA_WIDTH / SSD_MODEL_WIDTH;
     height = (gdouble) objects[i].height * MEDIA_HEIGHT / SSD_MODEL_HEIGHT;
 
-    if (IS_HAND (model)) {
-      nns_logd ("capture now : %d %d %d %d", (gint) x, (gint) y, (gint) width, (gint) height);
+    if (i == 0) {
+      do_something((gint) x, (gint) y, (gint) width, (gint) height);
     }
 
     /* draw rectangle */
@@ -1080,17 +1101,19 @@ nns_ex_prepare_pipeline (const gint option)
   return TRUE;
 }
 
-static NNSPipelineInfo nns_ex_pipeline = {
-  .id = 1,
-  .name = "NNStreamer with multi models",
-  .description = "Example with Tensorflow-lite models.",
-  .init = nns_ex_init,
-  .free = nns_ex_free,
-  .get_name = nns_ex_get_name,
-  .get_description = nns_ex_get_description,
-  .prepare_pipeline = nns_ex_prepare_pipeline,
-  .launch_pipeline = nns_ex_launch_pipeline
-};
+/**
+ * @brief Update text description
+ */
+gboolean
+do_something(gint tempx, gint tempy, gint tempwidth, gint tempheight) {
+  rectx = tempx;
+  recty = tempy;
+  width = tempwidth;
+  height = tempheight;
+  // nns_logd ("log now : %d %d %d %d", rectx, recty, width, height);
+
+  return TRUE;
+}
 
 /**
  * @brief Register nnstreamer example.

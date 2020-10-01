@@ -100,6 +100,7 @@ public class NNStreamerActivity extends Activity implements
 
         stopPipelineTimer();
         stopTimerTask();
+        startTimerTask();
         nativePause();
     }
 
@@ -118,6 +119,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     @Override
+
     protected void onDestroy() {
         super.onDestroy();
 
@@ -130,7 +132,7 @@ public class NNStreamerActivity extends Activity implements
     private void startTimerTask(){
 	timerTask=new TimerTask(){
             public void run(){
-                viewDesc.setText(nativeGetTest(1, (1 << 3)));
+                viewDesc.setText(nativeGetTest(1, (1 << 2)));
             }
 	    };
 	timer.schedule(timerTask, 0, 1000);
@@ -222,6 +224,7 @@ public class NNStreamerActivity extends Activity implements
         case R.id.main_button_m3:
         case R.id.main_button_m4:
             stopTimerTask();
+            startTimerTask();
             startPipeline(PIPELINE_ID);
             break;
         default:

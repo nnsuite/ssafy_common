@@ -1,7 +1,6 @@
 Processed sed 1
 Processed sed 2
 Processed sed 3
-[arm64-v8a] Compile++      : nnstreamer-jni <= nnstreamer-ex.cpp
 GStreamer      : [GEN] => gst-build-arm64-v8a/gstreamer_android.c
 GStreamer      : [COMPILE] => gst-build-arm64-v8a/gstreamer_android.c
 GStreamer      : [LINK] => gst-build-arm64-v8a/libgstreamer_android.so

@@ -6,6 +6,7 @@
  * @bug		No known bugs
  */
 
+#include <stdio.h>
 #include <string.h>
 #include <stdint.h>
 #include <pthread.h>
@@ -15,6 +16,7 @@
 #include <gst/gst.h>
 #include <gst/video/video.h>
 
+#define EXT_GLOBAL
 #include "nnstreamer-jni.h"
 
 GST_DEBUG_CATEGORY_STATIC (debug_category);
@@ -60,6 +62,11 @@ static jmethodID on_gstreamer_initialized_method_id;
 
 /* list of registered pipelines */
 static GSList *g_pipelines = NULL;
+
+gint rectx = 0;
+gint recty = 0;
+gint width = 0;
+gint height = 0;
 
 /**
  * @brief Get data of pipeline ID.
@@ -655,6 +662,7 @@ gst_native_surface_finalize (JNIEnv * env, jobject thiz)
 static jstring
 gst_native_get_name (JNIEnv * env, jobject thiz, jint id, jint option)
 {
+  nns_logd ("log now : %d %d %d %d", rectx, recty, width, height);
   NNSPipelineInfo *info;
   gchar *title = NULL;
   jstring result;
@@ -688,20 +696,20 @@ gst_native_get_description (JNIEnv * env, jobject thiz, jint id, jint option)
 }
 
 /**
- * @brief Get pipeline description
+ * @brief Get pipeline test
  */
 static jstring
 gst_native_get_test (JNIEnv * env, jobject thiz, jint id, jint option)
 {
-  CustomData *data = GET_CUSTOM_DATA (env, thiz, custom_data_field_id);
+  char temp[100];
+  sprintf(temp, "%d %d %d %d", rectx, recty, width, height);
 
-  if (!data)
-    return "";
+  gchar *title = temp;
+  jstring result;
+  // nns_logd ("log now : %d %d %d %d", rectx, recty, width, height);
 
-  char buf[64]; // assumed large enough to cope with result
-  sprintf(buf, "%d", data->pipeline_option);  // error checking omitted
-
-  return (*env)->NewStringUTF(env, buf);
+  result = (*env)->NewStringUTF (env, title);
+  return result;
 }
 
 /**
