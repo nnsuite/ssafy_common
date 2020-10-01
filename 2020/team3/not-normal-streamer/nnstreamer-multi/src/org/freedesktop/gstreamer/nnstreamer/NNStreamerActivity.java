@@ -149,15 +149,14 @@ public class NNStreamerActivity extends Activity implements
                 rectW = Integer.parseInt(printText[2]);
                 rectH = Integer.parseInt(printText[3]);
 
-                if (rectX == 0 && rectY == 0 && rectW == 0 && rectH == 0 && print_cnt == 0 && temp_cnt < 5) {
+                if (rectX == 0 && rectY == 0 && rectW == 0 && rectH == 0 && print_cnt == 0 && temp_cnt < 10) {
                     temp_cnt += 1;
                 }
                 else if (rectX == 0 && rectY == 0 && rectW == 0 && rectH == 0 && print_cnt == 0) {
                     print_cnt = 1;
                     resultText = "너무 빨리 움직이거나 설정이 안되어있는 상태입니다";
-                    if (resultArrayX.size() > 50) {
-                        if (Math.abs(resultArrayX.get(0) - resultArrayX.get(resultArrayX.size() - 1)) >
-                                Math.abs(resultArrayY.get(0) - resultArrayY.get(resultArrayY.size() - 1))) {
+                    if (resultArrayX.size() > 100) {
+                        if (Math.abs(240 - resultArrayX.get(resultArrayX.size() - 1)) > Math.abs(240 - resultArrayY.get(resultArrayY.size() - 1))) {
                             if (resultArrayX.get(0) > resultArrayX.get(resultArrayX.size() - 1)) {
                                 resultText = "Left : " + resultArrayX.get(0) + " " + resultArrayY.get(0) + " " +
                                         resultArrayX.get(resultArrayX.size() - 1) + " " + resultArrayY.get(resultArrayY.size() - 1) + "";
@@ -205,7 +204,7 @@ public class NNStreamerActivity extends Activity implements
                 viewDesc.setText(resultText);
             }
 	    };
-	timer.schedule(timerTask, 0, 10);
+	timer.schedule(timerTask, 0, 5);
     }
 
     private void stopTimerTask(){
