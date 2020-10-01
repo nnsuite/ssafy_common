@@ -141,7 +141,7 @@ public class DownloadModel extends AsyncTask<ArrayList<String>, String, Boolean>
             String fileUrl = downUrl + fileName;
             URL url = new URL(fileUrl);
 
-            Log.i(TAG, "Start downloading file " + fileName);
+            Log.i(TAG, "파일 다운로드 시작 " + fileName);
 
             connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(3000);
@@ -156,7 +156,7 @@ public class DownloadModel extends AsyncTask<ArrayList<String>, String, Boolean>
 
             downloadFile = new File(downloadPath, fileName);
             if (downloadFile.exists()) {
-                Log.d(TAG, "File exists, delete this file " + fileName);
+                Log.d(TAG, "파일이 존재하며, 파일 삭제 " + fileName);
                 downloadFile.delete();
                 downloadFile = new File(downloadPath, fileName);
             }
@@ -168,7 +168,7 @@ public class DownloadModel extends AsyncTask<ArrayList<String>, String, Boolean>
 
             while ((len = input.read(data)) > 0) {
                 if (isCancelled()) {
-                    Log.i(TAG, "Download canceled " + fileName);
+                    Log.i(TAG, "다운로드가 취소됨 " + fileName);
                     failed = true;
                     return false;
                 }
@@ -177,13 +177,13 @@ public class DownloadModel extends AsyncTask<ArrayList<String>, String, Boolean>
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Log.e(TAG, "Failed to download, " + e.getMessage());
+            Log.e(TAG, "다운로드 실패, " + e.getMessage());
             failed = true;
             return false;
         } finally {
             try {
                 if (failed) {
-                    Log.i(TAG, "Failed to download file " + fileName);
+                    Log.i(TAG, "파일 다운로드 실패 " + fileName);
                 }
 
                 if (input != null) {

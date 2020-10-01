@@ -5,14 +5,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
-import android.widget.Toast;
 
-/* A simple SurfaceView whose width and height can be set from the outside */
+/* 외부에서 폭과 높이를 설정할 수 있는 간단한 SurfaceView */
 public class GStreamerSurfaceView extends SurfaceView {
     public static int media_width = 480;
     public static int media_height = 480;
 
-    /* Mandatory constructors, they do not do much */
     public GStreamerSurfaceView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
@@ -26,9 +24,9 @@ public class GStreamerSurfaceView extends SurfaceView {
     }
 
     /**
-     * Called by the layout manager to find out our size and give us some rules.
-     * We will try to maximize our size, and preserve the media's aspect ratio if
-     * we are given the freedom to do so.
+     * 레이아웃 매니저가 전화하여 사이즈를 파악하고 몇 가지 규칙을 알려준다.
+     * 규모를 극대화하고, 미디어의 가로 세로 비율을 보존할 수 있도록 노력하겠다.
+     * 그렇게 할 수 있는 자유가 주어진다.
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -40,7 +38,7 @@ public class GStreamerSurfaceView extends SurfaceView {
 
         Log.i ("GStreamer", "onMeasure called with " + media_width + "x" + media_height);
 
-        /* Obey width rules */
+        /* 폭 규칙 준수 */
         switch (wmode) {
         case View.MeasureSpec.AT_MOST:
             if (hmode == View.MeasureSpec.EXACTLY) {
@@ -54,7 +52,7 @@ public class GStreamerSurfaceView extends SurfaceView {
             width = media_width;
         }
 
-        /* Obey height rules */
+        /* 높이 규칙 준수 */
         switch (hmode) {
         case View.MeasureSpec.AT_MOST:
             if (wmode == View.MeasureSpec.EXACTLY) {
@@ -68,7 +66,7 @@ public class GStreamerSurfaceView extends SurfaceView {
             height = media_height;
         }
 
-        /* Finally, calculate best size when both axis are free */
+        /* 마지막으로 양쪽 축이 비어 있을 때 최적의 크기를 계산하십시오. */
         if (hmode == View.MeasureSpec.AT_MOST && wmode == View.MeasureSpec.AT_MOST) {
             int correct_height = width * media_height / media_width;
             int correct_width = height * media_width / media_height;
@@ -79,7 +77,7 @@ public class GStreamerSurfaceView extends SurfaceView {
                 width = correct_width;
         }
 
-        /* Obey minimum size */
+        /* 최소 크기 준수 */
         width = Math.max (getSuggestedMinimumWidth(), width);
         height = Math.max (getSuggestedMinimumHeight(), height);
         setMeasuredDimension(width, height);
