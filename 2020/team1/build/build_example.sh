@@ -7,7 +7,7 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$NNST_ROOT/lib/pkgconfig\n" >> ~/.bashrc
 
 source ~/.bashrc
 
-git clone https://github.com/nnsuite/nnstreamer-example.git nnstreamer-example.git
+git clone https://github.com/nnstreamer/nnstreamer-example
 cd nnstreamer-example.git
 meson --prefix=${NNST_ROOT} --libdir=lib --bindir=bin --includedir=include build
 ninja -C build install

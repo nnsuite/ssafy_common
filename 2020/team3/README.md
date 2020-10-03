@@ -1,37 +1,41 @@
-# NNStreamer Tutorial Review
+# NNStreamer Tutorial for Hand Gesture app
 
-## 조건
+
 ```sh
 - https://github.com/nnstreamer/nnstreamer-example/tree/master/android/example_app
 
-자체 Android / ARM64 비트 대상 장치에 NNStreamer 기반 애플리케이션을 배포한다고 가정합니다. 또한 Android Studio를 사용하여 이미 Android 애플리케이션 개발을 경험했다고 가정합니다.
+We assume that you want to deploy a NNStreamer-based application on your own Android/ARM64bit target device. Also, we assume that you already have experienced Android application developments with Android Studio.
+- Host PC : 
+  -OS: Ubuntu 18.04 x86_64 LTS
+  -VM: VMware Workstation 16 Player
+  -Android Studio: Ubuntu version (However, the Window version will be compatible.)
+- Target Device:
+  - CPU : ARM 64bit (aarch64)
+  - SDK : Min version 24 (Nougat)
+  - ndroid NDK: Android NDK, Revision 18b (January 2019)
+  - GStreamer : gstreamer-1.0-android-universal-1.15.1.tar.bz2
+  
 ```
 
 
 ```sh
-- PC, Device 조건
-OS: Ubuntu 18.04.5
-VM: VMware Workstation 16 Player
 
-CPU : ARM 64bit (aarch64)
-SDK : Min version 24 (Nougat)
-
-# NDK 다운 경로 : https://developer.android.com/ndk/downloads/older_releases.html
+# NDK download url : https://developer.android.com/ndk/downloads/older_releases.html
 NDK : Android NDK, Revision 18b (January 2019)
 
-# GStreamer 다운 경로 : https://gstreamer.freedesktop.org/data/pkg/android/
+# GStreamer download url : https://gstreamer.freedesktop.org/data/pkg/android/
 GStreamer : gstreamer-1.0-android-universal-1.15.1.tar.bz2
 
-# Git Clone 다운 경로 : git clone https://github.com/nnstreamer/nnstreamer
+# Git Clone download url : git clone https://github.com/nnstreamer/nnstreamer
 NNStreamer : cd nnstreamer / git reset --hard 6b27767fc0af96dcfd7dd3f84eef215bd50a7aaa
 
-# Git Clone 다운 경로 : https://github.com/nnstreamer/nnstreamer-example
+# Git Clone download url : https://github.com/nnstreamer/nnstreamer-example
 NNStreamer-example : cd nnstreamer-example
 ```
 
 
 ```sh
-- PATH 설정 (사용자 경로에 맞게 설정해주세요)
+- environment PATH 
 
 $ export ANDROID_DEV_ROOT=$HOME/Android           # Set your own path (default location: $HOME/Android)
 $ mkdir -p $ANDROID_DEV_ROOT/tools/sdk
@@ -61,15 +65,16 @@ sudo apt install subversion curl pkg-config
 cd $ANDROID_SDK/tools/bin
 yes | ./sdkmanager --licenses
 
-# NDK 다운 : https://developer.android.com/ndk/downloads/older_releases.html
+# NDK download url : https://developer.android.com/ndk/downloads/older_releases.html
 NDK : Android NDK, Revision 18b (January 2019)
 
-# GStreamer 다운 경로 : https://gstreamer.freedesktop.org/data/pkg/android/
+# GStreamer download url : https://gstreamer.freedesktop.org/data/pkg/android/
 GStreamer : gstreamer-1.0-android-universal-1.15.1.tar.bz2
 mkdir $ANDROID_DEV_ROOT/gstreamer-1.0
-cd $ANDROID_DEV_ROOT/gstreamer-1.0 -> 안에다가 내용물 넣어주세요
+cd $ANDROID_DEV_ROOT/gstreamer-1.0 
+- move downloaded Gstreamer file in to gstreamer-1.0
 
-# 내용 수정
+# Modify content 
 $GSTREAMER_ROOT_ANDROID/{Target-ABI}/share/gst-android/ndk-build/gstreamer-1.0.mk
 
 @@ -127,2 +127,2 @@
@@ -114,7 +119,7 @@ $GSTREAMER_ROOT_ANDROID/{Target-ABI}/share/gst-android/ndk-build/gstreamer_andro
          "Could not register native methods for org.freedesktop.gstreamer.GStreamer");
 
 
-# Git Clone 다운 경로 : git clone https://github.com/nnstreamer/nnstreamer
+# Git Clone download url : git clone https://github.com/nnstreamer/nnstreamer
 cd $ANDROID_DEV_ROOT/workspace
 git clone https://github.com/nnstreamer/nnstreamer.git
 cd nnstreamer
@@ -162,7 +167,10 @@ Import project in Android Studio.
 Check a target NDK version (File - Project Structure)
 Install
 
-build.gradle 내용 수정, NDK 경로 수정
+
+- Modify `build.gradle` 
+- Modify default NDK PATH
+
 build.gradle
 buildscript {
     repositories {
@@ -176,3 +184,29 @@ buildscript {
     }
 }
 ```
+```sh
+development Status
+### 2020.09.29
+
+- Android development settings for all team members completed
+- Solve related issues for example-tutorial (revert back to what was working normally)
+
+### 2020.09.30
+
+- After deciding to attach the hand-landmark model that exists in the Google Media Pipeline to the hand-detection model, development begins.
+- Starting to get coordinate Values from NNstreamer-example application
+
+### 2020.10.01
+
+- Success in getting coordinates
+- Tried agetting coordinates using the landmark model, but failed-> Change to swipe format using hand-detection coordinates
+
+### 2020.10.02
+
+- Swipe up, down, left, and right recognition success
+- Command mapping for each gesture
+
+
+```
+
+
