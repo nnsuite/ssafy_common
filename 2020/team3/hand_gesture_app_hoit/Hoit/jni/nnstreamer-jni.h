@@ -45,6 +45,7 @@ extern "C"
 {
 #endif
 
+/* Custom Function, Variable */
 gboolean nns_register_pipeline(NNSPipelineInfo *info);
 gboolean do_something(gint tempx, gint tempy, gint tempwidth, gint tempheight);
 

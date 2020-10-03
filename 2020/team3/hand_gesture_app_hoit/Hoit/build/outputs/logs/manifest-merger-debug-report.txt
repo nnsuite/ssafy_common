@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
 MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/7f4836b8bb4ea122889db439a0258ccf/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
@@ -32,9 +32,9 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/davichiar/.gradle/cach
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/dffa5b1b6b38b2d619f3fbb58d7b5d8d/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e1132b786c1c0f4d3bc8edb1a0a96823/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4b15c1d8a7af6c63a761321047ade6a0/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:4:5-51
 		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
@@ -81,12 +81,8 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:5-68
 	android:name
 		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:22-65
-uses-permission#android.intent.action.MEDIA_MOUNTED
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-75
-	android:name
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:22-72
 application
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:5-38:19
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-35:19
 MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:22:5-20
@@ -98,35 +94,35 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gr
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:24:9-41
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:9-41
 	android:hardwareAccelerated
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-43
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:19:9-43
 	tools:ignore
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:27:9-48
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:24:9-48
 	android:icon
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-43
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:20:9-43
 	android:theme
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:9-71
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-71
 	android:networkSecurityConfig
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-69
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-69
 activity#org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:9-37:20
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-34:20
 	android:screenOrientation
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:31:13-49
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:13-49
 	android:label
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:13-45
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:27:13-45
 	android:name
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-47
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:13-36:29
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:17-69
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:25-66
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:17-77
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:27-74
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:27-74
 uses-sdk
 INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml

@@ -1,4 +1,4 @@
-#Sat Oct 03 00:57:14 PDT 2020
+#Sat Oct 03 04:15:48 PDT 2020
 base.0=/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

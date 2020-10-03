@@ -3,30 +3,19 @@ package org.freedesktop.gstreamer.nnstreamer;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v7.widget.CardView;
-import android.text.Html;
 import android.util.Log;
-import android.view.PixelCopy;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -43,19 +32,9 @@ import android.support.v4.content.ContextCompat;
 import org.freedesktop.gstreamer.GStreamer;
 import org.freedesktop.gstreamer.GStreamerSurfaceView;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -67,19 +46,19 @@ public class NNStreamerActivity extends Activity implements
     private static final int PIPELINE_ID = 1;
     private static final String downloadPath = Environment.getExternalStorageDirectory().getPath() + "/nnstreamer/tflite_model";
 
-    private native void nativeInit(int w, int h); /* 네이티브 코드 초기화, 파이프라인 구축 등 */
-    private native void nativeFinalize(); /* 파이프라인 파괴 및 기본 코드 종료 */
-    private native void nativeStart(int id, int option); /* ID로 파이프라인 시작 */
-    private native void nativeStop();     /* 파이프라인 중지 */
-    private native void nativePlay();     /* 파이프라인을 PLAYING으로 설정 */
-    private native void nativePause();    /* 파이프라인을 PASUED로 설정 */
-    private static native boolean nativeClassInit(); /* 기본 클래스 초기화: 콜백에 대한 캐시 메서드 ID */
+    private native void nativeInit(int w, int h); /* Initialize native code, build pipeline, etc */
+    private native void nativeFinalize(); /* Destroy pipeline and shutdown native code */
+    private native void nativeStart(int id, int option); /* Start pipeline with id */
+    private native void nativeStop();     /* Stop the pipeline */
+    private native void nativePlay();     /* Set pipeline to PLAYING */
+    private native void nativePause();    /* Set pipeline to PAUSED */
+    private static native boolean nativeClassInit(); /* Initialize native class: cache Method IDs for callbacks */
     private native void nativeSurfaceInit(Object surface);
     private native void nativeSurfaceFinalize();
     private native String nativeGetName(int id, int option);
     private native String nativeGetDescription(int id, int option);
     private native String nativeGetTest(int id, int option);
-    private long native_custom_data;      /* 기본 코드는 이를 사용하여 개인 데이터를 보관함 */
+    private long native_custom_data;      /* Native code will use this to keep private data */
 
     private int pipelineId = 0;
     private CountDownTimer pipelineTimer = null;
@@ -99,32 +78,36 @@ public class NNStreamerActivity extends Activity implements
     private TimerTask timerTask;
     private Timer timer = new Timer();
 
+    /* Functions used by onBackPressed */
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
-    static final int REQUEST_SELECT_CONTACT = 1;
 
-    private RelativeLayout main_surface_area, main_root;
-    private int temp_cnt = 0;
+    /* Functions used by startTimerTask */
     private int rectX = 0, rectY = 0, rectW = 0, rectH = 0;
-    private int print_cnt = 0, schedule_cnt = 0;
-    private String resultText = "";
+    private String strUP = "", strDOWN = "", strLEFT = "", strRIGHT = "";
     private ArrayList<Integer> resultArrayX = new ArrayList();
     private ArrayList<Integer> resultArrayY = new ArrayList();
 
-    private String strUP = "", strDOWN = "", strLEFT = "", strRIGHT = "";
-    private SurfaceView sv;
+    /* Functions used by appRunFunction */
+    private int layout_cnt = 1, schedule_cnt = 0;
 
-    private List CardList;
-    private LinearLayout sub_pipeline_area, main_pipeline_area, plus_pipeline_area;
+    /* Functions used by initActivity */
+    private RelativeLayout main_surface_area, main_root;
+    private LinearLayout main_pipeline_area, plus_pipeline_area, sub_pipeline_area;
     private Spinner up_spinner, down_spinner, left_spinner, right_spinner;
-    private int layout_cnt = 1;
 
-    /* 기본 세팅 (권한 설정, 타이머 시작) */
+    private SurfaceView sv;
+    private List CardList;
+
+    private int temp_cnt = 0, print_cnt = 0;
+    private String resultText = "";
+
+    /* Function used to create */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /* 권한 확인 */
+        /* Check permissions */
         if (!checkPermission(Manifest.permission.CAMERA) ||
             !checkPermission(Manifest.permission.INTERNET) ||
             !checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE) ||
@@ -141,12 +124,12 @@ public class NNStreamerActivity extends Activity implements
             return;
         }
 
-        /* 액티비티 설정, 타이머 시작 */
+        /* activity settings, timer starts */
         initActivity();
-        startTimerTask();
+        startTimerTask(); /* Plus - startTimer */
     }
 
-    /* 잠시 멈췄을 때 사용하는 함수 */
+    /* Function used when paused */
     @Override
     public void onPause() {
         super.onPause();
@@ -159,13 +142,13 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
-    /* 재개 할때 사용하는 함수 */
+    /* Function used to resume */
     @Override
     public void onResume() {
         super.onResume();
 
         if (schedule_cnt == 0) {
-            /* 파이프라인 시작 */
+            /* Start pipeline */
             if (initialized) {
                 if (downloadTask != null && downloadTask.isProgress()) {
                     Log.d(TAG, "모델 파일 다운로드 시작");
@@ -176,7 +159,7 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
-    /* 종료할 때 사용하는 함수 */
+    /* Function used to exit */
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -197,7 +180,8 @@ public class NNStreamerActivity extends Activity implements
         editor.commit();
     }
 
-    /* 두 번 이전 버튼 누를시 완전 종료 */
+    /* Pressing the previous button twice completely shuts down */
+    /* Stored data in SharedPreferences */
     @Override
     public void onBackPressed() {
         long tempTime = System.currentTimeMillis();
@@ -231,7 +215,7 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
-    /* 타이머 시작, 제스처 판단 (왼쪽, 오른쪽, 위, 아래) */
+    /* Timer start, gesture judge (left, right, top, bottom) */
     private void startTimerTask(){
 	timerTask=new TimerTask(){
             public void run(){
@@ -322,7 +306,7 @@ public class NNStreamerActivity extends Activity implements
 	timer.schedule(timerTask, 0, 5);
     }
 
-    /* 타이머 종료 */
+    /* Timer End */
     private void stopTimerTask(){
 	if(timerTask != null){
 	    timerTask.cancel();
@@ -330,7 +314,7 @@ public class NNStreamerActivity extends Activity implements
 	}
     }
 
-    /* 제스처에 따라 어플리케이션 실행 */
+    /* Follow the gestures to run the application */
     private void appRunFunction(int cnt) {
         if (layout_cnt == 1) {
             timer.cancel();
@@ -370,8 +354,8 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 이것은 UI 스레드에서 나온 토스트를 보여준다.
-     * 네이티브 코드에서 호출됨.
+     * This shows the toast from the UI thread.
+     * Called from native code.
      */
     private void setMessage(final String message) {
         runOnUiThread(new Runnable() {
@@ -382,15 +366,15 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 파이프라인을 생성하면 네이티브 코드가 호출하며
-     * 메인 루프가 실행 중이므로 명령을 수신할 준비가 되어 있다.
-     * 네이티브 코드에서 호출됨.
+     * Native code calls this once it has created its pipeline and
+     * the main loop is running, so it is ready to accept commands.
+     * Called from native code.
      */
     private void onGStreamerInitialized(final String title, final String desc) {
-        /* GStreamer가 초기화되었으며 파이프라인을 재생할 준비가 되었다. */
+        /* GStreamer is initialized and ready to play pipeline. */
         runOnUiThread(new Runnable() {
             public void run() {
-                /* 여기서 파이프라인 제목 및 설명 업데이트 */
+                /* Update pipeline title and description here */
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -399,20 +383,20 @@ public class NNStreamerActivity extends Activity implements
 
                 nativePlay();
 
-                /* UI 업데이트 (버튼 및 기타 구성 요소) */
+                /* Update UI (buttons and other components) */
                 enableButton(true);
             }
         });
     }
 
-    /* 라이브러리를 로드한다 */
+    /* Load library */
     static {
         System.loadLibrary("gstreamer_android");
         System.loadLibrary("nnstreamer-jni");
         nativeClassInit();
     }
 
-    /* SurfaceHolder.콜백 인터페이스 구현 */
+    /* SurfaceHolder.Callback interface implementation */
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 
         Log.d(TAG, "Surface 포맷 변경 " + format + " width "
@@ -420,25 +404,25 @@ public class NNStreamerActivity extends Activity implements
         nativeSurfaceInit(holder.getSurface());
     }
 
-    /* SurfaceHolder.콜백 인터페이스 구현 */
+    /* SurfaceHolder.Callback interface implementation */
     public void surfaceCreated(SurfaceHolder holder) {
         Log.d(TAG, "Surface 생성: " + holder.getSurface());
     }
 
-    /* SurfaceHolder.콜백 인터페이스 구현 */
+    /* SurfaceHolder.Callback interface implementation */
     public void surfaceDestroyed(SurfaceHolder holder) {
         Log.d(TAG, "Surface 파괴");
         nativeSurfaceFinalize();
     }
 
-    /* 버튼 클릭시 나오는 이벤트 */
+    /* Event that appears when you click the button */
     @Override
     public void onClick(View v) {
-        /* View.OnClickListener 인터페이스 구현 */
+        /* View.OnClickListener interface implementation */
         final int viewId = v.getId();
 
         if (pipelineTimer != null) {
-            /* 새 파이프라인이 가동됨 */
+            /* Do nothing, new pipeline will be started soon. */
             return;
         }
 
@@ -472,6 +456,7 @@ public class NNStreamerActivity extends Activity implements
                 startActivity(i);
                 break;
 
+            /* fallthrough */
             case R.id.main_button_cam:
                 useFrontCamera = !useFrontCamera;
 
@@ -485,7 +470,7 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
-    /* 권한 허용 함수 */
+    /* Permission Acceptance Function */
     @Override
     public void onRequestPermissionsResult(int requestCode,
             String permissions[], int[] grantResults) {
@@ -506,7 +491,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 지정된 권한이 부여되었는지 확인하십시오.
+     * Check the given permission is granted.
      */
     private boolean checkPermission(final String permission) {
         return (ContextCompat.checkSelfPermission(this, permission)
@@ -514,21 +499,21 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 토스트를 (메시지를) 띄워주는 함수
+     * Create toast with given message.
      */
     private void showToast(final String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     /**
-     * GStreamer와 레이아웃을 초기화하십시오.
+     * Initialize GStreamer and the layout.
      */
     private void initActivity() {
         if (initialized) {
             return;
         }
 
-        /* GStreamer 초기화 및 실패 시 경고 */
+        /* Initialize GStreamer and warn if it fails */
         try {
             GStreamer.init(this);
         } catch(Exception e) {
@@ -537,7 +522,7 @@ public class NNStreamerActivity extends Activity implements
             return;
         }
 
-        /* 미디어 해상도를 사용하여 초기화하십시오. */
+        /* Initialize with media resolution. */
         nativeInit(GStreamerSurfaceView.media_width, GStreamerSurfaceView.media_height);
 
         setContentView(R.layout.main);
@@ -547,7 +532,7 @@ public class NNStreamerActivity extends Activity implements
         buttonCam = (ImageButton) findViewById(R.id.main_button_cam);
         buttonCam.setOnClickListener(this);
 
-        /* 모델에 대한 이벤트 수신기 추가 */
+        /* Add event listener for models */
         String model1 = "Hand Gesture 설정 (상, 하, 좌, 우)";
         buttonModel1 = (ToggleButton) findViewById(R.id.main_button_m1);
         buttonModel1.setOnClickListener(this);
@@ -576,10 +561,10 @@ public class NNStreamerActivity extends Activity implements
         buttonModel4.setTextOn(model4);
         buttonModel4.setTextOff(model4);
 
+        /* Save existing variables, update card view */
         main_surface_area = (RelativeLayout) findViewById(R.id.main_surface_area);
         main_surface_area.setVisibility(View.VISIBLE);
 
-        /* 기존 변수 저장, 카드 뷰 업데이트 */
         SharedPreferences sf = getSharedPreferences("sFile",MODE_PRIVATE);
         strUP = sf.getString("up","");
         strDOWN = sf.getString("down","");
@@ -595,6 +580,7 @@ public class NNStreamerActivity extends Activity implements
         plus_pipeline_area = (LinearLayout) findViewById(R.id.plus_pipeline_area);
         plus_pipeline_area.setVisibility(View.GONE);
 
+        /* Spinner, Button setting */
         up_spinner = (Spinner) findViewById(R.id.up_spinner);
         List<String> list1 = new ArrayList<String>();
         list1.add("UP 제스처 : 선택 안함");
@@ -688,6 +674,7 @@ public class NNStreamerActivity extends Activity implements
         buttonModel5.setOnClickListener(this);
         buttonModel5.setText("이전 화면으로 돌아가기");
 
+        /* CardList setting */
         CardList = new ArrayList();
 
         CardList.add("none");
@@ -705,22 +692,22 @@ public class NNStreamerActivity extends Activity implements
 
         main_root = (RelativeLayout) findViewById(R.id.main_root);
 
-        /* surface 카메라 */
+        /* Video surface for camera */
         sv = (SurfaceView) this.findViewById(R.id.main_surface_video);
         SurfaceHolder sh = sv.getHolder();
         sh.addCallback(this);
 
-        /* 기본 코드의 파이프라인이 초기화될 때까지 비활성화된 버튼부터 시작하십시오. */
+        /* Start with disabled buttons, until the pipeline in native code is initialized. */
         enableButton(false);
 
         initialized = true;
 
-        /* 손 감지를 바로 시작한다. */
+        /* Start hand sensing right away. */
         buttonModel2.performClick();
     }
 
     /**
-     * 모델을 시작하려면 버튼을 활성화(또는 비활성화)하십시오.
+     * Enable (or disable) buttons to launch model.
      */
     public void enableButton(boolean enabled) {
         buttonCam.setEnabled(enabled);
@@ -731,7 +718,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 파이프라인 시작 및 UI 업데이트.
+     * Start pipeline and update UI.
      */
     private void startPipeline(int newId) {
         pipelineId = newId;
@@ -748,7 +735,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 파이프라인 타이머를 취소하십시오.
+     * Cancel pipeline timer.
      */
     private void stopPipelineTimer() {
         if (pipelineTimer != null) {
@@ -758,7 +745,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 새 파이프라인을 시작하도록 타이머를 설정하십시오.
+     * Set timer to start new pipeline.
      */
     private void setPipelineTimer() {
         final long time = 200;
@@ -775,7 +762,7 @@ public class NNStreamerActivity extends Activity implements
 
                 pipelineTimer = null;
                 if (pipelineId == PIPELINE_ID) {
-                    /* 여기서 파이프라인 옵션 설정 */
+                    /* Set pipeline option here */
                     if (buttonModel2.isChecked()) option |= (1 << 2);
                     if (useFrontCamera) option |= (1 << 8);
                 }
@@ -786,7 +773,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 모델 파일이 특정 디렉터리에 있는지 확인하십시오.
+     * Check a model file exists in specific directory.
      */
     private boolean checkModelFile(String fileName) {
         File modelFile;
@@ -802,7 +789,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 모델 파일 다운로드를 시작하십시오.
+     * Start to download model files.
      */
     private void downloadModels() {
         downloadTask = new DownloadModel(this, downloadPath);
@@ -810,7 +797,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 특정 디렉터리에 필요한 모든 파일이 있는지 확인하십시오.
+     * Check all necessary files exists in specific directory.
      */
     private boolean checkModels() {
         downloadList.clear();
@@ -828,7 +815,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 모델 파일을 다운로드하는 대화 상자 표시
+     * Show dialog to download model files.
      */
     private void showDownloadDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
