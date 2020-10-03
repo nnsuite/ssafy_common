@@ -1,0 +1,199 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/7f4836b8bb4ea122889db439a0258ccf/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/88d14b956215a5a54ac68ea50f34e743/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eb3b1a0c198c30281165ff74679f7ed/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/1400c0d32acd06deb37ad9d5754e4020/support-core-ui-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fc0b25b1a250bc61d2d45ac73b720feb/support-core-utils-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/f5ad2f0c1e5d156a68e7889eb57aef27/support-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fe4a80a973cbc84e2ec5f5f9ccbbbfa4/loader-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e260ac07beb0f329b5c457b532ba7f03/viewpager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0ccaa89d34772cb76dd66c1f17584f07/coordinatorlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/ae5f7aee6edeff9a8a7993ad57b78287/drawerlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e9320d7bedf99ca6a2e9eb7ca2ba1f6/slidingpanelayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/700d56cd6e3a015ff731021e6a7d5b4f/customview-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6e9f122bfdea8e62db92ce7ee7a15067/swiperefreshlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/2e594df614a3ac4dc083ebd99a9b9700/asynclayoutinflater-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6985ce763d7f4446cf160e25b3768847/versionedparcelable-28.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/5e058c0773b4b0a5f83d02043fb1f9cc/cursoradapter-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d3b4f3afe7031dad9d15396c34d9e7ed/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d45bf0c94c33e7a6c0282c5335b6088b/documentfile-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0bdec6041be99f2eb5f2772674b24c12/localbroadcastmanager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/435647d2efead4b4069de089e11bdeba/print-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/302df6df7d6a8a99f56dc8f3596115f1/viewmodel-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d87fa7e4e8014cd6bdb80e607d878f95/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/dffa5b1b6b38b2d619f3fbb58d7b5d8d/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e1132b786c1c0f4d3bc8edb1a0a96823/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4b15c1d8a7af6c63a761321047ade6a0/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:1-40:12
+	package
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:4:5-51
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:6:5-30
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:5:5-28
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+uses-feature#0x00020000
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:8:5-54
+	android:glEsVersion
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:8:19-51
+uses-feature#android.hardware.camera
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:9:5-11:36
+	android:required
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:11:9-33
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:10:9-47
+uses-permission#android.permission.CAMERA
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:22-62
+uses-permission#android.permission.INTERNET
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:14:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:15:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:5-68
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:22-65
+uses-permission#android.intent.action.MEDIA_MOUNTED
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:22-72
+application
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:5-38:19
+MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6985ce763d7f4446cf160e25b3768847/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6985ce763d7f4446cf160e25b3768847/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:24:9-41
+	android:hardwareAccelerated
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-43
+	tools:ignore
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:27:9-48
+	android:icon
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-43
+	android:theme
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:9-71
+	android:networkSecurityConfig
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-69
+activity#org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:9-37:20
+	android:screenOrientation
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:31:13-49
+	android:label
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:13-45
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:27-74
+uses-sdk
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eeb4b735d070a0d943d49a3be618ecb/constraint-layout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/30f5705cbbff3643a49882fd08bc8988/cardview-v7-24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/7f4836b8bb4ea122889db439a0258ccf/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/7f4836b8bb4ea122889db439a0258ccf/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/88d14b956215a5a54ac68ea50f34e743/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/88d14b956215a5a54ac68ea50f34e743/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eb3b1a0c198c30281165ff74679f7ed/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4eb3b1a0c198c30281165ff74679f7ed/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/1400c0d32acd06deb37ad9d5754e4020/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/1400c0d32acd06deb37ad9d5754e4020/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fc0b25b1a250bc61d2d45ac73b720feb/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fc0b25b1a250bc61d2d45ac73b720feb/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/f5ad2f0c1e5d156a68e7889eb57aef27/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/f5ad2f0c1e5d156a68e7889eb57aef27/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fe4a80a973cbc84e2ec5f5f9ccbbbfa4/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/fe4a80a973cbc84e2ec5f5f9ccbbbfa4/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e260ac07beb0f329b5c457b532ba7f03/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e260ac07beb0f329b5c457b532ba7f03/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0ccaa89d34772cb76dd66c1f17584f07/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0ccaa89d34772cb76dd66c1f17584f07/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/ae5f7aee6edeff9a8a7993ad57b78287/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/ae5f7aee6edeff9a8a7993ad57b78287/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e9320d7bedf99ca6a2e9eb7ca2ba1f6/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e9320d7bedf99ca6a2e9eb7ca2ba1f6/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/700d56cd6e3a015ff731021e6a7d5b4f/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/700d56cd6e3a015ff731021e6a7d5b4f/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6e9f122bfdea8e62db92ce7ee7a15067/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6e9f122bfdea8e62db92ce7ee7a15067/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/2e594df614a3ac4dc083ebd99a9b9700/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/2e594df614a3ac4dc083ebd99a9b9700/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6985ce763d7f4446cf160e25b3768847/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/6985ce763d7f4446cf160e25b3768847/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/5e058c0773b4b0a5f83d02043fb1f9cc/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/5e058c0773b4b0a5f83d02043fb1f9cc/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d3b4f3afe7031dad9d15396c34d9e7ed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d3b4f3afe7031dad9d15396c34d9e7ed/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d45bf0c94c33e7a6c0282c5335b6088b/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d45bf0c94c33e7a6c0282c5335b6088b/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0bdec6041be99f2eb5f2772674b24c12/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0bdec6041be99f2eb5f2772674b24c12/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/435647d2efead4b4069de089e11bdeba/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/435647d2efead4b4069de089e11bdeba/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/302df6df7d6a8a99f56dc8f3596115f1/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/302df6df7d6a8a99f56dc8f3596115f1/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d87fa7e4e8014cd6bdb80e607d878f95/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/d87fa7e4e8014cd6bdb80e607d878f95/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/dffa5b1b6b38b2d619f3fbb58d7b5d8d/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/dffa5b1b6b38b2d619f3fbb58d7b5d8d/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e1132b786c1c0f4d3bc8edb1a0a96823/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/davichiar/.gradle/caches/transforms-2/files-2.1/e1132b786c1c0f4d3bc8edb1a0a96823/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4b15c1d8a7af6c63a761321047ade6a0/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/4b15c1d8a7af6c63a761321047ade6a0/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		ADDED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+		INJECTED from /home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml

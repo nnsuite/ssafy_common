@@ -79,6 +79,7 @@ public class NNStreamerActivity extends Activity implements
     private ArrayList<Integer> resultArrayX = new ArrayList();
     private ArrayList<Integer> resultArrayY = new ArrayList();
 
+    /* 기본 세팅 (권한 설정, 타이머 시작) */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +106,7 @@ public class NNStreamerActivity extends Activity implements
         startTimerTask();
     }
 
+    /* 잠시 멈췄을 때 사용하는 함수 */
     @Override
     public void onPause() {
         super.onPause();
@@ -115,6 +117,7 @@ public class NNStreamerActivity extends Activity implements
         nativePause();
     }
 
+    /* 재개 할때 사용하는 함수 */
     @Override
     public void onResume() {
         super.onResume();
@@ -129,6 +132,7 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
+    /* 종료할 때 사용하는 함수 */
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -139,6 +143,7 @@ public class NNStreamerActivity extends Activity implements
         nativeFinalize();
     }
 
+    /* 타이머 시작, 제스처 판단 (왼쪽, 오른쪽, 위, 아래) */
     private void startTimerTask(){
 	timerTask=new TimerTask(){
             public void run(){
@@ -207,6 +212,7 @@ public class NNStreamerActivity extends Activity implements
 	timer.schedule(timerTask, 0, 5);
     }
 
+    /* 타이머 종료 */
     private void stopTimerTask(){
 	if(timerTask != null){
 	    timerTask.cancel();
@@ -250,31 +256,33 @@ public class NNStreamerActivity extends Activity implements
         });
     }
 
+    /* 라이브러리를 로드한다 */
     static {
-        /* 라이브러리를 로드한다 */
         System.loadLibrary("gstreamer_android");
         System.loadLibrary("nnstreamer-jni");
         nativeClassInit();
     }
 
+    /* SurfaceHolder.콜백 인터페이스 구현 */
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        /* SurfaceHolder.콜백 인터페이스 구현 */
+
         Log.d(TAG, "Surface 포맷 변경 " + format + " width "
                 + width + " height " + height);
         nativeSurfaceInit(holder.getSurface());
     }
 
+    /* SurfaceHolder.콜백 인터페이스 구현 */
     public void surfaceCreated(SurfaceHolder holder) {
-        /* SurfaceHolder.콜백 인터페이스 구현 */
         Log.d(TAG, "Surface 생성: " + holder.getSurface());
     }
 
+    /* SurfaceHolder.콜백 인터페이스 구현 */
     public void surfaceDestroyed(SurfaceHolder holder) {
-        /* SurfaceHolder.콜백 인터페이스 구현 */
         Log.d(TAG, "Surface 파괴");
         nativeSurfaceFinalize();
     }
 
+    /* 버튼 클릭시 나오는 이벤트 */
     @Override
     public void onClick(View v) {
         /* View.OnClickListener 인터페이스 구현 */
@@ -311,6 +319,7 @@ public class NNStreamerActivity extends Activity implements
         }
     }
 
+    /* 권한 허용 함수 */
     @Override
     public void onRequestPermissionsResult(int requestCode,
             String permissions[], int[] grantResults) {
@@ -339,7 +348,7 @@ public class NNStreamerActivity extends Activity implements
     }
 
     /**
-     * 지정된 권한이 부여되었는지 확인하십시오.
+     * 토스트를 (메시지를) 띄워주는 함수
      */
     private void showToast(final String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
@@ -382,8 +391,7 @@ public class NNStreamerActivity extends Activity implements
         buttonModel1.setTextOn(model1);
         buttonModel1.setTextOff(model1);
 
-        String model2 = nativeGetName(1, (1 << 2));
-        model2 = "손 움직임 탐지";
+        String model2 = "손 움직임 탐지";
         buttonModel2 = (ToggleButton) findViewById(R.id.main_button_m2);
         buttonModel2.setOnClickListener(this);
         buttonModel2.setText(model2);
@@ -398,8 +406,7 @@ public class NNStreamerActivity extends Activity implements
         buttonModel3.setTextOn(model3);
         buttonModel3.setTextOff(model3);
 
-        String model4 = nativeGetName(1, (1 << 4));
-        model4 = "포즈(움직임) 탐지";
+        String model4 = "카메라 숨기기 / 보이기";
         buttonModel4 = (ToggleButton) findViewById(R.id.main_button_m4);
         buttonModel4.setOnClickListener(this);
         buttonModel4.setText(model4);

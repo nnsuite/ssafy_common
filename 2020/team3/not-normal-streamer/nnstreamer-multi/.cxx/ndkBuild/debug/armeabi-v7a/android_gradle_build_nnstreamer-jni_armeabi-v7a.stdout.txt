@@ -6,7 +6,6 @@ GStreamer      : [COMPILE] => gst-build-armeabi-v7a/gstreamer_android.c
 GStreamer      : [LINK] => gst-build-armeabi-v7a/libgstreamer_android.so
 Done mkdir
 Done cp
-[armeabi-v7a] Prebuilt       : libgstreamer_android.so <= gst-build-armeabi-v7a/
 [armeabi-v7a] Compile thumb  : nnstreamer <= tensor_common.c
 [armeabi-v7a] Compile thumb  : nnstreamer <= tensor_filter_common.c
 [armeabi-v7a] Compile thumb  : nnstreamer <= tensor_filter_custom_easy.c

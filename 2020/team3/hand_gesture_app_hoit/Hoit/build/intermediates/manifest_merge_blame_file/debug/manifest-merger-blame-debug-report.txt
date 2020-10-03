@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.freedesktop.gstreamer.nnstreamer.multi"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml
+10
+11    <uses-feature android:glEsVersion="0x00020000" />
+11-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:8:5-54
+11-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:8:19-51
+12    <uses-feature
+12-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:9:5-11:36
+13        android:name="android.hardware.camera"
+13-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:10:9-47
+14        android:required="false" />
+14-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:11:9-33
+15
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:5-65
+16-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:22-62
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:14:5-67
+17-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:14:22-64
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:15:5-80
+18-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:15:22-77
+19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+19-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:16:5-81
+19-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:16:22-78
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:5-68
+20-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:22-65
+21    <uses-permission android:name="android.intent.action.MEDIA_MOUNTED" />
+21-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-75
+21-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:22-72
+22    <uses-permission android:name="android.permission.CAMERA" />
+22-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:5-65
+22-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:13:22-62
+23
+24    <application
+24-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:5-38:19
+25        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+25-->[com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+26        android:debuggable="true"
+27        android:hardwareAccelerated="true"
+27-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-43
+28        android:icon="@drawable/hoit_logo"
+28-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-43
+29        android:label="@string/app_name"
+29-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:24:9-41
+30        android:networkSecurityConfig="@xml/network_security_config"
+30-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-69
+31        android:testOnly="true"
+32        android:theme="@android:style/Theme.DeviceDefault.NoActionBar" >
+32-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:9-71
+33        <activity
+33-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:9-37:20
+34            android:name="org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity"
+34-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-47
+35            android:label="@string/app_name"
+35-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:13-45
+36            android:screenOrientation="portrait" >
+36-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:31:13-49
+37            <intent-filter>
+37-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:13-36:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:17-69
+38-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:17-77
+40-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:27-74
+41            </intent-filter>
+42        </activity>
+43    </application>
+44
+45</manifest>
