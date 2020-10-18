@@ -35,42 +35,68 @@
 20    <uses-permission android:name="android.permission.WAKE_LOCK" />
 20-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:5-68
 20-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:17:22-65
-21
-22    <application
-22-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-35:19
-23        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-23-->[com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:18-91
-24        android:debuggable="true"
-25        android:hardwareAccelerated="true"
-25-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:19:9-43
-26        android:icon="@drawable/hoit_logo"
-26-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:20:9-43
-27        android:label="@string/app_name"
-27-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:9-41
-28        android:networkSecurityConfig="@xml/network_security_config"
-28-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-69
-29        android:testOnly="true"
-30        android:theme="@android:style/Theme.DeviceDefault.NoActionBar" >
-30-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-71
-31        <activity
-31-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-34:20
-32            android:name="org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity"
-32-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:13-47
-33            android:label="@string/app_name"
-33-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:27:13-45
-34            android:screenOrientation="portrait" >
-34-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:13-49
-35            <intent-filter>
-35-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-33:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:17-69
-36-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:17-77
-38-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:27-74
-39            </intent-filter>
-40        </activity>
-41    </application>
-42
-43</manifest>
+21    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+21-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:5-70
+21-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:18:22-68
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:19:5-77
+22-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:19:22-74
+23
+24    <meta-data
+24-->[com.android.support:recyclerview-v7:25.3.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/a0375506e3279efbcf408432153655dd/recyclerview-v7-25.3.0/AndroidManifest.xml:22:5-24:34
+25        android:name="android.support.VERSION"
+25-->[com.android.support:recyclerview-v7:25.3.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/a0375506e3279efbcf408432153655dd/recyclerview-v7-25.3.0/AndroidManifest.xml:23:9-47
+26        android:value="25.3.0" />
+26-->[com.android.support:recyclerview-v7:25.3.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/a0375506e3279efbcf408432153655dd/recyclerview-v7-25.3.0/AndroidManifest.xml:24:9-31
+27
+28    <application
+28-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:21:5-40:19
+29        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+29-->[com.android.support:support-compat:28.0.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/0e14959ef1a2405709f67b94b7e7f67a/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+30        android:debuggable="true"
+31        android:hardwareAccelerated="true"
+31-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:22:9-43
+32        android:icon="@drawable/hoit_logo"
+32-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:23:9-43
+33        android:label="@string/app_name"
+33-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:24:9-41
+34        android:networkSecurityConfig="@xml/network_security_config"
+34-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:25:9-69
+35        android:testOnly="true"
+36        android:theme="@android:style/Theme.DeviceDefault.NoActionBar" >
+36-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:26:9-71
+37        <activity
+37-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:28:9-37:20
+38            android:name="org.freedesktop.gstreamer.nnstreamer.NNStreamerActivity"
+38-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:29:13-47
+39            android:label="@string/app_name"
+39-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:30:13-45
+40            android:screenOrientation="portrait" >
+40-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:31:13-49
+41            <intent-filter>
+41-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:32:13-36:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:17-69
+42-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:33:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:17-77
+44-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:35:27-74
+45            </intent-filter>
+46        </activity>
+47
+48        <service android:name="org.freedesktop.gstreamer.nnstreamer.NNStreamerService" />
+48-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:39:9-62
+48-->/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/AndroidManifest.xml:39:18-51
+49
+50        <activity
+50-->[com.tbruyelle.rxpermissions:rxpermissions:0.7.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3a4ca934b8be1cbb258ae67e847c8bd1/rxpermissions-0.7.0/AndroidManifest.xml:11:9-14:75
+51            android:name="com.tbruyelle.rxpermissions.ShadowActivity"
+51-->[com.tbruyelle.rxpermissions:rxpermissions:0.7.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3a4ca934b8be1cbb258ae67e847c8bd1/rxpermissions-0.7.0/AndroidManifest.xml:12:13-70
+52            android:launchMode="singleTop"
+52-->[com.tbruyelle.rxpermissions:rxpermissions:0.7.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3a4ca934b8be1cbb258ae67e847c8bd1/rxpermissions-0.7.0/AndroidManifest.xml:13:13-43
+53            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+53-->[com.tbruyelle.rxpermissions:rxpermissions:0.7.0] /home/davichiar/.gradle/caches/transforms-2/files-2.1/3a4ca934b8be1cbb258ae67e847c8bd1/rxpermissions-0.7.0/AndroidManifest.xml:14:13-72
+54    </application>
+55
+56</manifest>

@@ -11,6 +11,9 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim decelerate_cubic
+anim popup_enter
+anim popup_exit
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -230,6 +233,7 @@ attr lastBaselineToBottomHeight
 attr layout
 attr layoutDescription
 attr layoutDuringTransition
+attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -307,6 +311,35 @@ attr maxButtonHeight
 attr maxHeight
 attr maxVelocity
 attr maxWidth
+attr md_background_color
+attr md_btn_negative_selector
+attr md_btn_neutral_selector
+attr md_btn_positive_selector
+attr md_btn_ripple_color
+attr md_btn_stacked_selector
+attr md_btnstacked_gravity
+attr md_buttons_gravity
+attr md_content_color
+attr md_content_gravity
+attr md_dark_theme
+attr md_divider
+attr md_divider_color
+attr md_icon
+attr md_icon_limit_icon_to_default_size
+attr md_icon_max_size
+attr md_item_color
+attr md_items_gravity
+attr md_link_color
+attr md_list_selector
+attr md_medium_font
+attr md_negative_color
+attr md_neutral_color
+attr md_positive_color
+attr md_reduce_padding_no_title_no_buttons
+attr md_regular_font
+attr md_title_color
+attr md_title_gravity
+attr md_widget_color
 attr measureWithLargestChild
 attr minHeight
 attr minWidth
@@ -325,6 +358,18 @@ attr motionTarget
 attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
+attr mpb_indeterminateTint
+attr mpb_indeterminateTintMode
+attr mpb_progressBackgroundTint
+attr mpb_progressBackgroundTintMode
+attr mpb_progressStyle
+attr mpb_progressTint
+attr mpb_progressTintMode
+attr mpb_secondaryProgressTint
+attr mpb_secondaryProgressTintMode
+attr mpb_setBothDrawables
+attr mpb_showProgressBackground
+attr mpb_useIntrinsicPadding
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
@@ -371,6 +416,7 @@ attr region_heightLessThan
 attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
+attr reverseLayout
 attr round
 attr roundPercent
 attr saturation
@@ -387,11 +433,13 @@ attr showText
 attr showTitle
 attr singleChoiceItemLayout
 attr sizePercent
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr staggered
 attr state_above_anchor
 attr statusBarBackground
@@ -482,6 +530,7 @@ attr windowNoTitle
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
+bool md_is_tablet
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -552,6 +601,13 @@ color material_grey_600
 color material_grey_800
 color material_grey_850
 color material_grey_900
+color md_btn_selected
+color md_btn_selected_dark
+color md_divider_black
+color md_divider_white
+color md_edittext_error
+color md_material_blue_600
+color md_material_blue_800
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -654,6 +710,7 @@ dimen abc_text_size_title_material_toolbar
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
+dimen circular_progress_border
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -670,6 +727,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen main_button_m_margin_bottom
 dimen main_button_m_margin_left
 dimen main_button_m_margin_right
@@ -691,6 +751,42 @@ dimen main_surface_margin_top
 dimen main_title_margin_bottom
 dimen main_title_margin_top
 dimen main_title_text_size
+dimen md_action_corner_radius
+dimen md_bg_corner_radius
+dimen md_button_frame_vertical_padding
+dimen md_button_height
+dimen md_button_inset_horizontal
+dimen md_button_inset_vertical
+dimen md_button_min_width
+dimen md_button_padding_frame_side
+dimen md_button_padding_horizontal
+dimen md_button_padding_horizontal_internalexternal
+dimen md_button_padding_vertical
+dimen md_button_textpadding_horizontal
+dimen md_button_textsize
+dimen md_content_padding_bottom
+dimen md_content_padding_top
+dimen md_content_textsize
+dimen md_dialog_frame_margin
+dimen md_dialog_horizontal_margin
+dimen md_dialog_max_width
+dimen md_dialog_vertical_margin
+dimen md_divider_height
+dimen md_icon_margin
+dimen md_icon_max_size
+dimen md_listitem_control_margin
+dimen md_listitem_height
+dimen md_listitem_margin_left
+dimen md_listitem_textsize
+dimen md_listitem_vertical_margin
+dimen md_listitem_vertical_margin_choice
+dimen md_neutral_button_margin
+dimen md_notitle_vertical_padding
+dimen md_notitle_vertical_padding_more
+dimen md_simplelistitem_padding_top
+dimen md_title_frame_margin_bottom
+dimen md_title_frame_margin_bottom_less
+dimen md_title_textsize
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -803,6 +899,19 @@ drawable category_button_bg_reset
 drawable category_button_bg_selected
 drawable category_button_click
 drawable hoit_logo
+drawable md_btn_selected
+drawable md_btn_selected_dark
+drawable md_btn_selector
+drawable md_btn_selector_dark
+drawable md_btn_selector_ripple
+drawable md_btn_selector_ripple_dark
+drawable md_btn_shape
+drawable md_item_selected
+drawable md_item_selected_dark
+drawable md_nav_back
+drawable md_selector
+drawable md_selector_dark
+drawable md_transparent
 drawable menu_refresh
 drawable notification_action_background
 drawable notification_bg
@@ -877,6 +986,7 @@ id chain
 id chains
 id checkbox
 id chronometer
+id circular
 id clip_horizontal
 id clip_vertical
 id collapseActionView
@@ -922,6 +1032,7 @@ id groups
 id home
 id homeAsUp
 id honorRequest
+id horizontal
 id icon
 id icon_group
 id ifRoom
@@ -931,6 +1042,7 @@ id image
 id info
 id invisible
 id italic
+id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id layout
@@ -952,6 +1064,22 @@ id main_root
 id main_surface_area
 id main_surface_video
 id main_text_desc
+id md_buttonDefaultNegative
+id md_buttonDefaultNeutral
+id md_buttonDefaultPositive
+id md_content
+id md_contentListViewFrame
+id md_contentRecyclerView
+id md_contentScrollView
+id md_control
+id md_customViewFrame
+id md_icon
+id md_label
+id md_minMax
+id md_promptCheckbox
+id md_root
+id md_title
+id md_titleFrame
 id message
 id middle
 id motion_base
@@ -1082,6 +1210,25 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout main
+layout md_dialog_basic
+layout md_dialog_basic_check
+layout md_dialog_custom
+layout md_dialog_input
+layout md_dialog_input_check
+layout md_dialog_list
+layout md_dialog_list_check
+layout md_dialog_progress
+layout md_dialog_progress_indeterminate
+layout md_dialog_progress_indeterminate_horizontal
+layout md_listitem
+layout md_listitem_multichoice
+layout md_listitem_singlechoice
+layout md_stub_actionbuttons
+layout md_stub_progress
+layout md_stub_progress_indeterminate
+layout md_stub_progress_indeterminate_horizontal
+layout md_stub_titleframe
+layout md_stub_titleframe_lesspadding
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1131,15 +1278,23 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string allow
 string app_name
+string ask_permission
 string cancel
 string close
 string download
 string download_model_failed
 string download_model_file
+string enable_autostart
+string my_service_name
 string nnst_example
+string permission_required
 string search_menu_title
+string start_service
 string status_bar_notification_info_overflow
+string stop_service
+string voice_recognizer_is_active
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1304,6 +1459,12 @@ style Base_Widget_AppCompat_Toolbar_Button_Navigation
 style CardView
 style CardView_Dark
 style CardView_Light
+style MD_ActionButton
+style MD_ActionButton_Text
+style MD_ActionButtonStacked
+style MD_Dark
+style MD_Light
+style MD_WindowAnimation
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_ThemeOverlay_AppCompat
@@ -1489,6 +1650,14 @@ style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style Widget_MaterialProgressBar_ProgressBar
+style Widget_MaterialProgressBar_ProgressBar_Horizontal
+style Widget_MaterialProgressBar_ProgressBar_Horizontal_NoPadding
+style Widget_MaterialProgressBar_ProgressBar_Large
+style Widget_MaterialProgressBar_ProgressBar_Large_NoPadding
+style Widget_MaterialProgressBar_ProgressBar_NoPadding
+style Widget_MaterialProgressBar_ProgressBar_Small
+style Widget_MaterialProgressBar_ProgressBar_Small_NoPadding
 style Widget_Support_CoordinatorLayout
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
@@ -1534,6 +1703,8 @@ styleable Layout android_orientation android_layout_width android_layout_height 
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable MDRootLayout md_reduce_padding_no_title_no_buttons
+styleable MaterialProgressBar mpb_indeterminateTint mpb_indeterminateTintMode mpb_progressBackgroundTint mpb_progressBackgroundTintMode mpb_progressStyle mpb_progressTint mpb_progressTintMode mpb_secondaryProgressTint mpb_secondaryProgressTintMode mpb_setBothDrawables mpb_showProgressBackground mpb_useIntrinsicPadding
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow
@@ -1549,6 +1720,7 @@ styleable PopupWindow android_popupBackground android_popupAnimationStyle overla
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_descendantFocusability layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable State android_id constraints

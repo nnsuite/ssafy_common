@@ -9,13 +9,16 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -37,6 +40,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.MaterialDialog.Builder;
+import com.afollestad.materialdialogs.Theme;
 
 public class NNStreamerActivity extends Activity implements
         SurfaceHolder.Callback,
@@ -123,10 +131,21 @@ public class NNStreamerActivity extends Activity implements
                 }, PERMISSION_REQUEST_ALL);
             return;
         }
-
         /* activity settings, timer starts */
         initActivity();
-        startTimerTask(); /* Plus - startTimer */
+
+        /* Service Start */
+        enableAutoStart();
+        Intent intent = new Intent(this, NNStreamerService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        }
+        else {
+            startService(intent);
+        }
+
+        /* Plus - startTimer */
+        startTimerTask();
     }
 
     /* Function used when paused */
@@ -178,6 +197,9 @@ public class NNStreamerActivity extends Activity implements
         editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
 
         editor.commit();
+
+        Intent intent = new Intent(this, NNStreamerService.class);
+        stopService(intent);
     }
 
     /* Pressing the previous button twice completely shuts down */
@@ -341,12 +363,13 @@ public class NNStreamerActivity extends Activity implements
                 String packageName = CardList.get(mode).toString();
                 try {
                     Intent intent = getPackageManager().getLaunchIntentForPackage(packageName);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     startActivity(intent);
                 }
                 catch (Exception e) {
                     String url = "market://details?id=" + packageName;
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     startActivity(i);
                 }
             }
@@ -447,12 +470,23 @@ public class NNStreamerActivity extends Activity implements
                 left_spinner.setSelection(0);
                 right_spinner.setSelection(0);
                 Toast.makeText(getApplicationContext(), "세팅이 초기화 되었습니다.", Toast.LENGTH_SHORT).show();
+
+                SharedPreferences sharedPreferences = getSharedPreferences("sFile",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString("up", Integer.toString(up_spinner.getSelectedItemPosition()));
+                editor.putString("down", Integer.toString(down_spinner.getSelectedItemPosition()));
+                editor.putString("left", Integer.toString(left_spinner.getSelectedItemPosition()));
+                editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
+
+                editor.commit();
                 break;
 
             case R.id.main_button_m4:
                 String packageName = "org.freedesktop.gstreamer.nnstreamer.multi";
                 String url = "market://details?id=" + packageName;
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(i);
                 break;
 
@@ -704,6 +738,90 @@ public class NNStreamerActivity extends Activity implements
 
         /* Start hand sensing right away. */
         buttonModel2.performClick();
+
+        /* Real-Time Spinner */
+        up_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sharedPreferences = getSharedPreferences("sFile",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString("up", Integer.toString(up_spinner.getSelectedItemPosition()));
+                editor.putString("down", Integer.toString(down_spinner.getSelectedItemPosition()));
+                editor.putString("left", Integer.toString(left_spinner.getSelectedItemPosition()));
+                editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
+
+                editor.commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        /* Real-Time Spinner */
+        down_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sharedPreferences = getSharedPreferences("sFile",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString("up", Integer.toString(up_spinner.getSelectedItemPosition()));
+                editor.putString("down", Integer.toString(down_spinner.getSelectedItemPosition()));
+                editor.putString("left", Integer.toString(left_spinner.getSelectedItemPosition()));
+                editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
+
+                editor.commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        /* Real-Time Spinner */
+        left_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sharedPreferences = getSharedPreferences("sFile",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString("up", Integer.toString(up_spinner.getSelectedItemPosition()));
+                editor.putString("down", Integer.toString(down_spinner.getSelectedItemPosition()));
+                editor.putString("left", Integer.toString(left_spinner.getSelectedItemPosition()));
+                editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
+
+                editor.commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        /* Real-Time Spinner */
+        right_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sharedPreferences = getSharedPreferences("sFile",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString("up", Integer.toString(up_spinner.getSelectedItemPosition()));
+                editor.putString("down", Integer.toString(down_spinner.getSelectedItemPosition()));
+                editor.putString("left", Integer.toString(left_spinner.getSelectedItemPosition()));
+                editor.putString("right", Integer.toString(right_spinner.getSelectedItemPosition()));
+
+                editor.commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     /**
@@ -840,5 +958,36 @@ public class NNStreamerActivity extends Activity implements
         });
 
         builder.show();
+    }
+
+    /**
+     * Voice Recognition Auto Start.
+     */
+    private void enableAutoStart() {
+        for (Intent intent : Constants.AUTO_START_INTENTS) {
+            if (getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+                new Builder(this).title(R.string.enable_autostart)
+                        .content(R.string.ask_permission)
+                        .theme(Theme.LIGHT)
+                        .positiveText(getString(R.string.allow))
+                        .onPositive(new MaterialDialog.SingleButtonCallback() {
+                            @Override
+                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                try {
+                                    for (Intent intent1 : Constants.AUTO_START_INTENTS)
+                                        if (NNStreamerActivity.this.getPackageManager().resolveActivity(intent1, PackageManager.MATCH_DEFAULT_ONLY)
+                                                != null) {
+                                            NNStreamerActivity.this.startActivity(intent1);
+                                            break;
+                                        }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        })
+                        .show();
+                break;
+            }
+        }
     }
 }

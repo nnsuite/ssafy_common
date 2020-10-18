@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/davichiar/Documents/nnstreamer-example/android/hand_gesture_app_hoit/Hoit/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+            "map": [
+                {
+                    "source": "/home/davichiar/.gradle/caches/transforms-2/files-2.1/783385f24b25bbf19c688bf733b260fa/core-0.9.4.2/res/values-v14/values-v14.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,406",
+                        "endLines": "8,17",
+                        "endColumns": "10,10",
+                        "endOffsets": "401,803"
+                    }
+                }
+            ]
+        }
+    ]
+}
